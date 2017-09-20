@@ -1,0 +1,242 @@
+---
+title: "Open data for urban research"
+subtitle: "Class 1/4: find and get data"
+author: "Samuel Goëta (Datactivist)"
+date: "Sciences Po, master Governing the Large Metropolis"
+output:
+  xaringan::moon_reader:
+    css: [default, xaringan.css]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+class: center, middle
+
+Find the course materials on Github https://github.com/datactivist/sciencespo_odur2017/
+
+These slides online: http://datactivi.st/sciencespo_odur2017/class1.html/
+
+Content created by Datactivist is placed under [Creative Commons CC-BY-SA licence](https://creativecommons.org/licenses/by-sa/3.0/deed.fr). 
+
+<img src="./img/Logo_DATACTIVIST_TW.png" height="100px" />
+
+---
+#Let's (re)discover open data!
+[![reddit data gouv](img/dgf.png)](https://www.reddit.com/r/france/comments/5ing61/datagouv_ou_comment_perdre_des_heures_%C3%A0_se/?st=j7slirpr&sh=9f27c06f)
+
+---
+#Objectives of this course
+.pull-left[
+- Learn what is open data: origins, principles, benefits, best practices 
+
+- Discover how to conduct an open data project
+
+- Explore each step in any project with open data
+]
+.pull-right[
+![](img/qui.jpg)
+]
+---
+#Overview of the course
+.pull-left[
+**Class 1 (17/10/20 - Samuel Goëta)** FIND and GET data
+
+**Class 2 (date TBC - Samuel Goëta)** VERIFY data
+
+**Class 3 (date TBC - Joël Gombin)** CLEAN data
+
+** Class 4 (date TBC - François Briatte)** VERIFY and PRESENT data
+]
+.pull-right[
+![](img/oc.png)
+]
+---
+#Your crew for this class
+![](img/crew.png)
+---
+class: center, middle
+
+Retrouvez les matériaux sur https://github.com/datactivist/opendatacorsica/
+
+Ces slides en ligne : http://datactivi.st/opendatacorsica/osm.html/
+
+Les contenus créés par Datactivist sont placés sous [licence Creative Commons CC-BY-SA](https://creativecommons.org/licenses/by-sa/3.0/deed.fr). 
+
+<img src="./img/Logo_DATACTIVIST_TW.png" height="100px" />
+---
+# Today's course
+
+- The origins of open data 
+
+- Open data behind the scene: the invisible data labor
+
+- The limits of open data: for civil servants, for the users
+
+- Alternative ways of getting data: open data on demand
+
+- Alternative ways of getting data: crowdsourced data
+---
+class: center, middle, inverse 
+# The origins of open data
+---
+## 2005: the Open Definition
+### Define the rights of users of open knowledge
+.reduite[![](img/opendef.png)]
+---
+## 2007: Sebastopol meeting
+###Open all public data as soon as produced
+.reduite[![](img/sebastopol.png)]
+---
+## 2008: "Raw data now"
+###Get all the raw data
+![](img/ted.png)
+---
+## 2010: the 5-star model
+### Get machine-readable data
+.reduite[![](img/5star.png)]
+---
+# Technical principles without political depth
+>"It may be true in some sense that a regime becomes more open whenever it provides additional open data, even for mun- dane and apolitical topics, but **it is easy to imagine that a closed regime might disclose large amounts of data conforming to these eight requirements without in any way advancing its actual accountability as a government**. 
+
+> […] An electronic release of the propaganda statements made by North Korea’s political leadership, for example, might satisfy all eight of these requirements and might not tend to promote any additional transparency or accountability on the part of the notoriously closed and unaccountable regime."
+
+>Yu & Robinson (2012) « The New Ambiguity of Open Government » 
+
+---
+# 2011: Open Government Declaration
+![](img/declaration.png)
+---
+#Open Government: how it works? 
+![](img/process.png)
+---
+# Since 2010: the era of rankings
+![](img/odb.png)
+---
+#Since 2010: the era of rankings
+![](img/godi.png)
+---
+#2013: the G8 Open Data Charter
+![](img/g8.jpg)
+---
+#2015: the International Open Data Charter
+![](img/charter.png)
+---
+class: center, middle,inverse
+# The invisible work of open data
+---
+# Surface the invisible work of open data
+.reduite[![](img/invisible.png)]
+---
+## Identify
+###Find who's responsible for the data
+.reduite[![](img/charlie.png)]
+---
+##Negociate
+###"The good organisational reasons" for not opening data
+![](img/nego.png)
+
+---
+## Extract
+### Reconstitute and tinker databases
+![](img/extract.png)
+
+---
+## Transform
+### The forgetten work of data editors. Dealing with standards
+.reduite[![](img/transform.png)]
+
+---
+##Publish
+###Produce metadata. Prepare data for visualisation.
+.reduite[![](img/publish.png)]
+
+---
+##Update
+![](img/update.png)
+---
+class:center, middle
+#"Rawification": raw data as an outcome
+---
+class:center, middle,inverse
+# The limits of supply-side open data
+---
+# Open Data
+.pull-left[
+#IN THEORY
+
+All raw public data are open as soon as they're produced.  
+]
+.pull-right[
+#IN PRACTICE
+
+Civil servants choose which data they will open, when, how and what they will hold.
+]
+---
+# Limits of supply-side open data for government administrations
+.pull-left[
+
+- A considerable but underestimated work
+
+- "No one's job": it's extremely rare to have dedicatd agents in local authorities for open data projects. 
+
+- Projects which depend on political support
+
+- Data publics are often untraceable. 
+]
+.pull-right[
+![](img/limit.png)
+]
+---
+# Frictions and disappointments for users 
+
+.pull-left[
+![](img/ogd.png)
+]
+
+.pull-right[
+- Data are hard to find: portals are labyrinths
+
+- Open data initiatives are [still rare](https://opendatainception.io/)
+
+- Granular and longitudinal data are still scarce. 
+
+- Data are often unusable or lack documentation. 
+
+- Data are not updated. 
+
+- Portals are designed mainly for developers. 
+]
+
+---
+# Open data and freedom of information: bridges to be built
+[![](img/odod.png)](webfoundation.org/2015/08/freedom-of-information-and-open-government-data-communities-could-benefit-from-closer-collaboration/)
+---
+# Our project: DODOdata
+.pull-left[
+![](img/dodo.png)]
+.pull-right[
+📣 A platform to radically simplify Demandes d’Ouverture de Données (DODO)
+
+📩 Precise, automatically redacted requests for selected datasets 
+
+📥 A platform to ease data management and help governments to pilot open data initiatives.
+]
+---
+# DODOdata: a census of "openable" datasets
+![](img/rece.png)
+
+---
+# Crowdsourcing: an alternative way of getting data
+.pull-left[![](img/crowd.png)
+]
+.pull-right[
+>“Simply defined, crowdsourcing represents the act of a company or institution taking a function once performed by employees and outsourcing it to an undefined (and generally large) network of people in the form of an open call. This can take the form of peer-production (when the job is performed collaboratively), but is also often undertaken by sole individuals.”
+
+>**Jeff Howe, Wired, 2006**
+]
+
+---
+class:inverse,middle,center
+# Thanks

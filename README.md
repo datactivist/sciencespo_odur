@@ -1,7 +1,10 @@
 # Open Data for Urban Research
 ![](scpo.png)
+
 **Master Governing the Large Metropolis
+
 Sciences Po, urban school
+
 Academic Year 2017/2018**
 
 ## Instructors

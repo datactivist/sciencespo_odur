@@ -20,27 +20,27 @@ Students will learn to assess the quality of existing open data resources, criti
 In order to have a better understanding of the pitfalls of any open data project, we will follow the School of Data pipeline in this class which will allow us to review all the necessary steps in any open data project.  
 ![](pipeline.png)
 
-##[Class 1 · Find and get data](http://datactivi.st/sciencespo_odur2017/class1/)
+## [Class 1 · Find and get data](http://datactivi.st/sciencespo_odur2017/class1/)
 Slides: http://datactivi.st/sciencespo_odur2017/class1/
 Date: Sept 20th 1PM -4PM
 Instructor: Samuel Goëta
 Reading: Harlan Yu and David G. Robinson, “[The New Ambiguity of ‘Open Government](https://www.uclalawreview.org/pdf/discourse/59-11.pdf)’”
 UCLA Law Review 59(178), 2012
 
-##[Class 2 - Verify data](http://datactivi.st/sciencespo_odur2017/class2/#1)
+## [Class 2 - Verify data](http://datactivi.st/sciencespo_odur2017/class2/#1)
 Slides: http://datactivi.st/sciencespo_odur2017/class2/
 Date: Oct 4th 1PM-4PM
 Instructor: Samuel Goëta 
 Reading: David Ribes and Steven J. Jackson, “[Data Bite Man: The Work of Sustaining a Long-Term Study](http://static1.1.sqspcdn.com/static/f/1070098/22175786/1363200724880/RibesJackson+-+Data+Bite+Man.pdf?token=QWR6lTGBtPNmiLqToDZCUWJkR3w%3D),” in Lisa Gitelman (ed.), ‘Raw Data’ is an Oxymoron, MIT Press, 2013, pp. 147–66.
 
-##Class 3 - Clean Data
+## Class 3 - Clean Data
 Date: Oct 25th 4PM-7PM
 Instructor: Joël Gombin 
 Readings:
 - Garrett Grolemund and Hadley Wickham, “[Tidy Data](http://r4ds.had.co.nz/tidy-data.html)” In R for Data Science, 2017, ch. 12
 - OKFN, "[Open data quality – the next shift in open data?](https://blog.okfn.org/2017/05/31/open-data-quality-the-next-shift-in-open-data/)"
 
-##Class 4 - Present data
+## Class 4 - Present data
 Date: Nov 23rd 4PM-7PM
 Instructor: Francois Briatte
 Readings:

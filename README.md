@@ -1,11 +1,8 @@
 # Open Data for Urban Research
 ![](scpo.png)
-
-Master Governing the Large Metropolis
-
+**Master Governing the Large Metropolis
 Sciences Po, urban school
-
-Academic Year 2017/2018
+Academic Year 2017/2018**
 
 ## Instructors
 - François Briatte	(ESPOL, Université Catholique de Lille)
@@ -40,31 +37,27 @@ Reading:
 
 ## Class 3 - Clean Data
 Date: Oct 25th 4PM-7PM
-
 Instructor: Joël Gombin 
 
 Readings:
-
 - Garrett Grolemund and Hadley Wickham, “Tidy Data”[In R for Data Science, 2017, ch. 12](http://r4ds.had.co.nz/tidy-data.html)
 - OKFN, "[Open data quality – the next shift in open data?](https://blog.okfn.org/2017/05/31/open-data-quality-the-next-shift-in-open-data/)"
 
 ## Class 4 - Present data
 Date: Nov 23rd 4PM-7PM
-
 Instructor: Francois Briatte
 
 Readings:
 - Wendy N. Espeland and Mitchell L. Stevens, “A Sociology of Quantification”[European Journal of Sociology 49(3): 401–36, 2009](https://www.researchgate.net/publication/231852216_A_Sociology_of_Quantification)
 - Kieran Healy and James Moody, “Data Visualization in Sociology”[Annual Review of Sociology 40:105–28, 2014](https://kieranhealy.org/files/papers/data-visualization.pdf) 
 
-Links
-
+Links:
 - Kieran Healy, Data Visualization for Social Science[socviz.co](http://socviz.co/)
 - Severino Ribecca, “The Data Visualization Catalogue”[datavizcatalogue.com](http://www.datavizcatalogue.com/)
 - Financial Times, “Visual Vocabulary. Designing with Data” [ft-interactive.github.io/visual-vocabulary](http://ft-interactive.github.io/visual-vocabulary/)
 
 ## Bibliography
-⚠Needs some sorting 
+
 
 ### ARTICLES
 Davies, Tim. 2010. “[Open Data, Democracy and Public Sector Reform. A Look at Open Government Data Use from data.gov.uk](http://practicalparticipation.co.uk/odi/report/wp-content/uploads/2010/08/How-is-open-government-data-being-used-in-practice.pdf).”

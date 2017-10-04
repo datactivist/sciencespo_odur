@@ -20,7 +20,9 @@ In order to have a better understanding of the pitfalls of any open data project
 ## [Class 1 · Find and get data](http://datactivi.st/sciencespo_odur2017/class1/)
 
 Slides: http://datactivi.st/sciencespo_odur2017/class1/
+
 Date: Sept 20th 1PM -4PM
+
 Instructor: Samuel Goëta
 
 Reading:
@@ -29,7 +31,9 @@ Reading:
 ## [Class 2 - Verify data](http://datactivi.st/sciencespo_odur2017/class2/#1)
 
 Slides: http://datactivi.st/sciencespo_odur2017/class2/
+
 Date: Oct 4th 1PM-4PM
+
 Instructor: Samuel Goëta 
 
 Reading: 
@@ -37,6 +41,7 @@ Reading:
 
 ## Class 3 - Clean Data
 Date: Oct 25th 4PM-7PM
+
 Instructor: Joël Gombin 
 
 Readings:
@@ -45,6 +50,7 @@ Readings:
 
 ## Class 4 - Present data
 Date: Nov 23rd 4PM-7PM
+
 Instructor: Francois Briatte
 
 Readings:
@@ -57,7 +63,6 @@ Links:
 - Financial Times, “Visual Vocabulary. Designing with Data” [ft-interactive.github.io/visual-vocabulary](http://ft-interactive.github.io/visual-vocabulary/)
 
 ## Bibliography
-
 
 ### ARTICLES
 Davies, Tim. 2010. “[Open Data, Democracy and Public Sector Reform. A Look at Open Government Data Use from data.gov.uk](http://practicalparticipation.co.uk/odi/report/wp-content/uploads/2010/08/How-is-open-government-data-being-used-in-practice.pdf).”

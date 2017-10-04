@@ -50,11 +50,11 @@ Ways of getting data
 ---
 #Update on the course
 .pull-left[
-**Class 1 (17/09/20 - Samuel Goëta)** FIND and GET data
+**Class 1 (09/20 - Samuel Goëta)** FIND and GET data
 
-**Class 2 (17/10/04 - Samuel Goëta)** VERIFY data
+**Class 2 (10/04 - Samuel Goëta)** VERIFY data
 
-**Class 3 (17/10/25 - Joël Gombin)** CLEAN data
+**Class 3 (10/25 - Joël Gombin)** CLEAN data
 
 ** Class 4 (date TBC - François Briatte)** VERIFY and PRESENT data
 ]

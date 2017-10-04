@@ -16,7 +16,7 @@ class: center, middle
 
 Find the course materials on Github https://github.com/datactivist/sciencespo_odur2017/
 
-These slides online: http://datactivi.st/sciencespo_odur2017/class1.html/
+These slides online: http://datactivi.st/sciencespo_odur2017/class1/
 
 Content created by Datactivist is placed under [Creative Commons CC-BY-SA licence](https://creativecommons.org/licenses/by-sa/3.0/deed.fr). 
 

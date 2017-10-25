@@ -44,6 +44,7 @@ Reading:
 
 ## [Class 3 - Clean Data](http://datactivi.st/sciencespo_odur2017/class3/#1)
 Date: Oct 25th 4PM-7PM
+Slides: http://datactivi.st/sciencespo_odur2017/class3/#1
 
 Instructor: Joël Gombin 
 

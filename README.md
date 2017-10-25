@@ -42,7 +42,7 @@ Instructor: Samuel Goëta
 Reading: 
 - David Ribes and Steven J. Jackson, “[Data Bite Man: The Work of Sustaining a Long-Term Study,](http://static1.1.sqspcdn.com/static/f/1070098/22175786/1363200724880/RibesJackson+-+Data+Bite+Man.pdf?token=QWR6lTGBtPNmiLqToDZCUWJkR3w%3D)” in Lisa Gitelman (ed.), ‘Raw Data’ is an Oxymoron, MIT Press, 2013, pp. 147–66.
 
-## Class 3 - Clean Data
+## [Class 3 - Clean Data](http://datactivi.st/sciencespo_odur2017/class3/#1)
 Date: Oct 25th 4PM-7PM
 
 Instructor: Joël Gombin 

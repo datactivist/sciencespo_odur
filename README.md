@@ -52,7 +52,7 @@ Readings:
 - Garrett Grolemund and Hadley Wickham, “Tidy Data”[In R for Data Science, 2017, ch. 12](http://r4ds.had.co.nz/tidy-data.html)
 - OKFN, "[Open data quality – the next shift in open data?](https://blog.okfn.org/2017/05/31/open-data-quality-the-next-shift-in-open-data/)"
 
-## Class 4 - [Present data](https://frama.link/odur-2017-s4)
+## [Class 4 - Present data](https://frama.link/odur-2017-s4)
 Nov 23rd, 4pm-7pm
 
 Instructor: [Francois Briatte](https://f.briatte.org/)
@@ -74,8 +74,10 @@ Books:
 
 Links:
 
-- Severino Ribecca, “The Data Visualization Catalogue”[datavizcatalogue.com](http://www.datavizcatalogue.com/)
-- Financial Times, “Visual Vocabulary. Designing with Data” [ft-interactive.github.io/visual-vocabulary](http://ft-interactive.github.io/visual-vocabulary/)
+- Severino Ribecca, “The Data Visualization Catalogue”  
+  [datavizcatalogue.com](http://www.datavizcatalogue.com/)
+- Financial Times, “Visual Vocabulary. Designing with Data”  
+  [ft-interactive.github.io/visual-vocabulary](http://ft-interactive.github.io/visual-vocabulary/)
 
 ## Bibliography
 

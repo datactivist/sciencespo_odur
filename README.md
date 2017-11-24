@@ -52,17 +52,28 @@ Readings:
 - Garrett Grolemund and Hadley Wickham, “Tidy Data”[In R for Data Science, 2017, ch. 12](http://r4ds.had.co.nz/tidy-data.html)
 - OKFN, "[Open data quality – the next shift in open data?](https://blog.okfn.org/2017/05/31/open-data-quality-the-next-shift-in-open-data/)"
 
-## Class 4 - Present data
-Date: Nov 23rd 4PM-7PM
+## Class 4 - [Present data](https://frama.link/odur-2017-s4)
+Nov 23rd, 4pm-7pm
 
-Instructor: Francois Briatte
+Instructor: [Francois Briatte](https://f.briatte.org/)
+
+- [Slides](https://frama.link/odur-2017-s4)
+- [Replication material](class4)
 
 Readings:
-- Wendy N. Espeland and Mitchell L. Stevens, “A Sociology of Quantification”[European Journal of Sociology 49(3): 401–36, 2009](https://www.researchgate.net/publication/231852216_A_Sociology_of_Quantification)
-- Kieran Healy and James Moody, “Data Visualization in Sociology”[Annual Review of Sociology 40:105–28, 2014](https://kieranhealy.org/files/papers/data-visualization.pdf) 
+
+- Wendy N. Espeland and Mitchell L. Stevens, “A Sociology of Quantification”  
+  [_European Journal of Sociology_ 49(3): 401–36, 2009](https://www.researchgate.net/publication/231852216_A_Sociology_of_Quantification)
+- Kieran Healy and James Moody, “Data Visualization in Sociology”  
+  [_Annual Review of Sociology_ 40:105–28, 2014](https://kieranhealy.org/files/papers/data-visualization.pdf)
+
+Books:
+
+- Kieran Healey, _[Data Visualization for Social Science. A Practical Introduction with R and ggplot2](http://socviz.co/)_
+- Edward R. Tufte, _[The Visual Display of Quantitative Information](https://www.edwardtufte.com/tufte/books_vdqi)_
 
 Links:
-- Kieran Healy, Data Visualization for Social Science[socviz.co](http://socviz.co/)
+
 - Severino Ribecca, “The Data Visualization Catalogue”[datavizcatalogue.com](http://www.datavizcatalogue.com/)
 - Financial Times, “Visual Vocabulary. Designing with Data” [ft-interactive.github.io/visual-vocabulary](http://ft-interactive.github.io/visual-vocabulary/)
 

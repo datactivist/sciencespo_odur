@@ -22,7 +22,7 @@ In order to have a better understanding of the pitfalls of any open data project
 
 ## [Class 1 · Find and get data](http://datactivi.st/sciencespo_odur2017/class1/)
 
-Slides: http://datactivi.st/sciencespo_odur2017/class1/
+Slides: http://datactivi.st/sciencespo_odur2018/class1/
 
 Date: Sept 20th 1PM -4PM
 
@@ -33,7 +33,7 @@ Reading:
 
 ## [Class 2 - Verify data](http://datactivi.st/sciencespo_odur2017/class2/#1)
 
-Slides: http://datactivi.st/sciencespo_odur2017/class2/
+Slides: http://datactivi.st/sciencespo_odur2018/class2/
 
 Date: Oct 4th 1PM-4PM
 
@@ -44,7 +44,7 @@ Reading:
 
 ## [Class 3 - Clean Data](http://datactivi.st/sciencespo_odur2017/class3/#1)
 Date: Oct 25th 4PM-7PM
-Slides: http://datactivi.st/sciencespo_odur2017/class3/#1
+Slides: http://datactivi.st/sciencespo_odur2018/class3/#1
 
 Instructor: Joël Gombin 
 

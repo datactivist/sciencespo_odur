@@ -4,8 +4,8 @@ subtitle: "Class 2/4: verify data"
 author: "Samuel Goëta (Datactivist)"
 date: "Sciences Po, master Governing the Large Metropolis"
 output:
-  xaringan::moon_reader:
-    css: [default, xaringan.css]
+  SlidesDatactivist::moon_reader:
+    css: [default, datactivist, datactivist-fonts]
     lib_dir: libs
     nature:
       highlightStyle: github

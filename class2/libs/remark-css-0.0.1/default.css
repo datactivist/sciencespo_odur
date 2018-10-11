@@ -51,14 +51,14 @@ blockquote {
   border-left: solid 5px lightgray;
   padding-left: 1em;
 }
-.remark-slide table {
+table {
   margin: auto;
   border-top: 1px solid #666;
   border-bottom: 1px solid #666;
 }
-.remark-slide table thead th { border-bottom: 1px solid #ddd; }
+table thead th { border-bottom: 1px solid #ddd; }
 th, td { padding: 5px; }
-.remark-slide thead, .remark-slide tfoot, .remark-slide tr:nth-child(even) { background: #eee }
+thead, tfoot, tr:nth-child(even) { background: #eee }
 
 @page { margin: 0; }
 @media print {

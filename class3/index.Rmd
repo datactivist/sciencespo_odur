@@ -1,0 +1,137 @@
+---
+title: "Open data for urban research"
+subtitle: "Class 3/4: clean data"
+author: "Joël Gombin (Datactivist)"
+date: "Sciences Po, master Governing the Large Metropolis"
+output:
+  xaringan::moon_reader:
+    css: [default, xaringan.css]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+class: center, middle
+
+Find the course materials on Github https://github.com/datactivist/sciencespo_odur2017/
+
+These slides online: http://datactivi.st/sciencespo_odur2017/class3/
+
+Content created by Datactivist is placed under [Creative Commons CC-BY-SA licence](https://creativecommons.org/licenses/by-sa/3.0/deed.fr). 
+
+<img src="./img/Logo_DATACTIVIST_TW.png" height="100px" />
+
+---
+#Objectives of this course
+.pull-left[
+- Learn what is open data: origins, principles, benefits, best practices 
+
+- Discover how to conduct an open data project
+
+- Explore each step in any project with open data
+]
+.pull-right[
+![](img/qui.jpg)
+]
+---
+#Overview of the course
+.pull-left[
+**Class 1 (17/10/20 - Samuel Goëta)** FIND and GET data
+
+**Class 2 (17/10/4 - Samuel Goëta)** VERIFY data
+
+**Class 3 (17/10/25, 4-7pm - Joël Gombin)** CLEAN data
+
+** Class 4 (17/11/23, 4-7pm - François Briatte)** VERIFY and PRESENT data
+]
+.pull-right[
+![](img/oc.png)]
+
+---
+# Today's course
+
+- Cleaning data: why it matters
+
+- Cleaning data: how it could be done
+
+- Cleaning data: examples
+
+---
+class: center, middle, inverse 
+# Cleaning data: why it matters
+
+---
+## Cleaning data: why it matters
+
+- discoverability
+- (re)usability
+
+---
+## Cleaning data: why it matters
+
+> To date, it seems that opening this data has not reduced but rather shifted and multiplied the barriers to the use of data
+
+[*OKFN*](https://blog.okfn.org/2017/05/31/open-data-quality-the-next-shift-in-open-data/)
+
+---
+## Cleaning data: why it matters
+
+The new Babel tower
+
+---
+## Cleaning data: why it matters
+
+Difficulty: no one is sure what "good quality" means exactly
+
+---
+## Cleaning data: why it matters
+
+"Clean" or "tidy" data does not necessarily exist *per se* - you have to think about who the potential users their needs are.
+
+
+---
+## Cleaning data: the museum of horrors
+
+[![](./img/wtf1.png)](http://opendata.regionpaca.fr/donnees/detail/traitement-des-dechets-de-mpm-synthese-de-2012-a-2014.html)
+
+---
+## Cleaning data: the museum of horrors
+
+[![](./img/wtf2.png)](http://data.montpellier3m.fr/dataset/chiffres-cl%C3%A9s-des-m%C3%A9diath%C3%A8ques-de-montpellier-m%C3%A9diterran%C3%A9e-m%C3%A9tropole)
+
+---
+## Cleaning data: the museum of horrors
+
+![](./img/wtf3.png)
+
+
+
+---
+class: center, middle, inverse
+# Cleaning data: how it could be done
+
+---
+## The tidy data framework
+
+
+
+---
+class: center, middle, inverse
+# Cleaning data: examples
+
+---
+## French electoral data
+
+https://github.com/joelgombin/LireMinInterieur
+
+---
+## A large project with plenty of different types of data
+
+https://joelgombin.github.io/makingof
+
+---
+## A recent project of urban open data
+
+https://github.com/CMARUE/APIs
+

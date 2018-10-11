@@ -14,9 +14,9 @@ output:
 ---
 class: center, middle
 
-Find the course materials on Github https://github.com/datactivist/sciencespo_odur2017/
+Find the course materials on Github https://github.com/datactivist/sciencespo_odur2018/
 
-These slides online: http://datactivi.st/sciencespo_odur2017/class2/
+These slides online: http://datactivi.st/sciencespo_odur2018/class2/
 
 Content created by Datactivist is placed under [Creative Commons CC-BY-SA licence](https://creativecommons.org/licenses/by-sa/3.0/deed.fr). 
 
@@ -25,7 +25,7 @@ Content created by Datactivist is placed under [Creative Commons CC-BY-SA licenc
 ---
 class:center, middle
 
-#Teach what you learn!
+#Teach what you learned!
 Origins of open data
 
 Freedom of Information: differences with open data
@@ -50,13 +50,13 @@ Ways of getting data
 ---
 #Update on the course
 .pull-left[
-**Class 1 (09/20 - Samuel Goëta)** FIND and GET data
+**Class 1 (Samuel Goëta)** FIND and GET data
 
-**Class 2 (10/04 - Samuel Goëta)** VERIFY data
+**Class 2 (10/10 - Samuel Goëta)** VERIFY data
 
-**Class 3 (10/25 - Joël Gombin)** CLEAN data
+** Class 3 (10/18 - François Briatte)** VERIFY and PRESENT data
 
-** Class 4 (date TBC - François Briatte)** VERIFY and PRESENT data
+** Class 4 (10/24 - Joël Gombin)** CLEAN data
 ]
 .pull-right[
 ![](img/oc.png)
@@ -208,19 +208,9 @@ All the actors in the data pipeline:
 A "stress-test for data with a checklist and a template for reporting issues. 
 ---
 # Let's give it a try with Paris data
-![](img/sprint.png)
+[![](img/sprint.png)](https://docs.google.com/spreadsheets/d/1sWX8tYmE_4JnLTiNAaxsvNFbR4WO0XZXJ37RQW3cjeQ/edit?usp=drive_web&ouid=109602911684625086115)
 
----
-# A collaborative translation
- 
-The quality sprint is only in English, we will translate it collaboratively and release the result. 
 
-**How?** 
-- I created a [Google spreadsheet](https://docs.google.com/spreadsheets/d/1sWX8tYmE_4JnLTiNAaxsvNFbR4WO0XZXJ37RQW3cjeQ/edit#gid=678479114) copy of the original document.
-
-- Each of you will translate 10 lines **in the report** (tab "rapport qualité") before next class
-
-- Assign yourselves in Basecamp 
 ---
 class:center, middle, inverse
 # Assignments

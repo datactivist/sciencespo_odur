@@ -4,8 +4,9 @@
     <title>Open data for urban research</title>
     <meta charset="utf-8">
     <meta name="author" content="Samuel Goëta (Datactivist)" />
-    <link href="libs/remark-css-0.0.1/example.css" rel="stylesheet" />
-    <link rel="stylesheet" href="xaringan.css" type="text/css" />
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/datactivist.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/datactivist-fonts.css" rel="stylesheet" />
   </head>
   <body>
     <textarea id="source">
@@ -20,9 +21,9 @@ class: center, middle, inverse, title-slide
 
 class: center, middle
 
-Find the course materials on Github https://github.com/datactivist/sciencespo_odur2017/
+Find the course materials on Github https://github.com/datactivist/sciencespo_odur2018/
 
-These slides online: http://datactivi.st/sciencespo_odur2017/class2/
+These slides online: http://datactivi.st/sciencespo_odur2018/class2/
 
 Content created by Datactivist is placed under [Creative Commons CC-BY-SA licence](https://creativecommons.org/licenses/by-sa/3.0/deed.fr). 
 
@@ -31,7 +32,7 @@ Content created by Datactivist is placed under [Creative Commons CC-BY-SA licenc
 ---
 class:center, middle
 
-#Teach what you learn!
+#Teach what you learned!
 Origins of open data
 
 Freedom of Information: differences with open data
@@ -56,13 +57,13 @@ Ways of getting data
 ---
 #Update on the course
 .pull-left[
-**Class 1 (17/09/20 - Samuel Goëta)** FIND and GET data
+**Class 1 (Samuel Goëta)** FIND and GET data
 
-**Class 2 (17/10/04 - Samuel Goëta)** VERIFY data
+**Class 2 (10/10 - Samuel Goëta)** VERIFY data
 
-**Class 3 (17/10/25 - Joël Gombin)** CLEAN data
+** Class 3 (10/18 - François Briatte)** VERIFY and PRESENT data
 
-** Class 4 (date TBC - François Briatte)** VERIFY and PRESENT data
+** Class 4 (10/24 - Joël Gombin)** CLEAN data
 ]
 .pull-right[
 ![](img/oc.png)
@@ -214,19 +215,9 @@ All the actors in the data pipeline:
 A "stress-test for data with a checklist and a template for reporting issues. 
 ---
 # Let's give it a try with Paris data
-![](img/sprint.png)
+[![](img/sprint.png)](https://docs.google.com/spreadsheets/d/1sWX8tYmE_4JnLTiNAaxsvNFbR4WO0XZXJ37RQW3cjeQ/edit?usp=drive_web&amp;ouid=109602911684625086115)
 
----
-# A collaborative translation
- 
-The quality sprint is only in English, we will translate it collaboratively and release the result. 
 
-**How?** 
-- I created a [Google spreadsheet](https://docs.google.com/spreadsheets/d/1sWX8tYmE_4JnLTiNAaxsvNFbR4WO0XZXJ37RQW3cjeQ/edit#gid=678479114) copy of the original document.
-
-- Each of you will translate 10 lines **in the report** (tab "rapport qualité") before next class
-
-- Assign yourselves in Basecamp 
 ---
 class:center, middle, inverse
 # Assignments
@@ -251,7 +242,15 @@ class:inverse,middle,center
 "highlightLines": true,
 "countIncrementalSlides": false
 });
-if (window.HTMLWidgets) slideshow.on('showSlide', function (slide) {setTimeout(function() {window.dispatchEvent(new Event('resize'));}, 100)});</script>
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
 
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
@@ -265,7 +264,7 @@ MathJax.Hub.Config({
 (function () {
   var script = document.createElement('script');
   script.type = 'text/javascript';
-  script.src  = 'https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML';
   if (location.protocol !== 'file:' && /^https?:/.test(script.src))
     script.src  = script.src.replace(/^https?:/, '');
   document.getElementsByTagName('head')[0].appendChild(script);

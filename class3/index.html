@@ -4,8 +4,9 @@
     <title>Open data for urban research</title>
     <meta charset="utf-8">
     <meta name="author" content="Joël Gombin (Datactivist)" />
-    <link href="libs/remark-css-0.0.1/example.css" rel="stylesheet" />
-    <link rel="stylesheet" href="xaringan.css" type="text/css" />
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/datactivist.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/datactivist-fonts.css" rel="stylesheet" />
   </head>
   <body>
     <textarea id="source">
@@ -20,13 +21,13 @@ class: center, middle, inverse, title-slide
 
 class: center, middle
 
-Find the course materials on Github https://github.com/datactivist/sciencespo_odur2017/
+Find the course materials on Github : https://github.com/datactivist/sciencespo_odur2018/
 
-These slides online: http://datactivi.st/sciencespo_odur2017/class3/
+These slides online: https://datactivist.coop/sciencespo_odur2018/class3/
 
-Content created by Datactivist is placed under [Creative Commons CC-BY-SA licence](https://creativecommons.org/licenses/by-sa/3.0/deed.fr). 
+Content created by Datactivist is placed under a [Creative Commons 4.0 BY-SA licence](https://creativecommons.org/licenses/by-sa/4.0/legalcode.fr). 
 
-&lt;img src="./img/Logo_DATACTIVIST_TW.png" height="100px" /&gt;
+&lt;img src="./img/Logo_DATACTIVIST_TW.png" height="200px" /&gt;
 
 ---
 #Objectives of this course
@@ -43,13 +44,13 @@ Content created by Datactivist is placed under [Creative Commons CC-BY-SA licenc
 ---
 #Overview of the course
 .pull-left[
-**Class 1 (17/10/20 - Samuel Goëta)** FIND and GET data
+**Class 1 (18/09/27 - Samuel Goëta)** FIND and GET data
 
-**Class 2 (17/10/4 - Samuel Goëta)** VERIFY data
+**Class 2 (18/10/11 - Samuel Goëta)** VERIFY data
 
-**Class 3 (17/10/25, 4-7pm - Joël Gombin)** CLEAN data
+**Class 3 (18/10/24 - Joël Gombin)** CLEAN data
 
-** Class 4 (17/11/23, 4-7pm - François Briatte)** VERIFY and PRESENT data
+** Class 4 (18/11/08, 5-8pm - François Briatte)** PRESENT data
 ]
 .pull-right[
 ![](img/oc.png)]
@@ -120,6 +121,326 @@ class: center, middle, inverse
 ---
 ## The tidy data framework
 
+&gt; “Happy families are all alike; every unhappy family is unhappy in its own way.” – Tolstoï
+
+&gt; “Tidy datasets are all alike, but every messy dataset is messy in its own way.” – Hadley Wickham
+
+
+1. Each variable forms a column.
+
+2. Each observation forms a row.
+
+3. Each type of observational unit forms a table / Each cell has one and only one value. 
+
+---
+## The tidy data framework
+
+&lt;img src="./img/tidy-1.png" width="90%" style="display: block; margin: auto;" /&gt;
+
+
+---
+## The tidy data framework
+
+1. Each variable forms a column.
+
+2. Each observation forms a row.
+
+3. Each type of observational unit forms a table.
+
+---
+## Tidying data with R
+
+Meet the tidyverse !
+
+.center[![](./img/tidyverse.png)]
+
+---
+## Tidying data with R
+
+- the `tidyverse` metapackage
+
+- `dplyr` and `tidyr`
+
+- the pipe : `%&gt;%` (Ctrl/Cmd + shift + M)
+
+- the verbs : 
+  + `filter` (and `slice`)
+  + `arrange`
+  + `select` (and `rename`)
+  + `distinct`
+  + `mutate` 
+  + `group_by` 
+  + `summarise`
+  + `sample_n` / `sample_frac`
+
+- the `stringr` package may be a useful companion (for strings manipulation / regex)
+
+
+---
+## Pivot
+
+`gather` and `spread`
+
+&lt;img src="http://r4ds.had.co.nz/images/tidy-9.png" width="90%" style="display: block; margin: auto;" /&gt;
+
+---
+## Pivot
+
+
+
+```r
+library(tidyverse)
+pres2017T1_communes &lt;- read_csv("./data/Presidentielle_2017_Resultats_Communes_T1_clean.csv",
+                       na = "",
+                       col_types = cols(
+  .default = col_double(),
+  CodeInsee = col_character(),
+  CodeDepartement = col_character(),
+  Département = col_character(),
+  Commune = col_character(),
+  Inscrits = col_integer(),
+  Abstentions = col_integer(),
+  Votants = col_integer(),
+  Blancs = col_integer(),
+  Nuls = col_integer(),
+  Exprimés = col_integer(),
+  `LE PEN` = col_integer(),
+  MÉLENCHON = col_integer(),
+  MACRON = col_integer(),
+  FILLON = col_integer(),
+  LASSALLE = col_integer(),
+  `DUPONT-AIGNAN` = col_integer(),
+  HAMON = col_integer(),
+  ASSELINEAU = col_integer(),
+  POUTOU = col_integer(),
+  ARTHAUD = col_integer(),
+  CHEMINADE = col_integer()
+  )
+)
+```
+
+---
+## Pivot
+
+
+```
+## # A tibble: 35,496 x 51
+##    CodeInsee CodeDepartement Département Commune Inscrits Abstentions
+##    &lt;chr&gt;     &lt;chr&gt;           &lt;chr&gt;       &lt;chr&gt;      &lt;int&gt;       &lt;int&gt;
+##  1 01001     01              Ain         L'Aber…      598          92
+##  2 01002     01              Ain         L'Aber…      209          25
+##  3 01004     01              Ain         Ambéri…     8586        1962
+##  4 01005     01              Ain         Ambéri…     1172         215
+##  5 01006     01              Ain         Ambléon       99          20
+##  6 01007     01              Ain         Ambron…     1880         268
+##  7 01008     01              Ain         Ambutr…      581          91
+##  8 01009     01              Ain         Andert…      254          41
+##  9 01010     01              Ain         Anglef…      738         136
+## 10 01011     01              Ain         Apremo…      275          43
+## # ... with 35,486 more rows, and 45 more variables: Abstentions_ins &lt;dbl&gt;,
+## #   Votants &lt;int&gt;, Votants_ins &lt;dbl&gt;, Blancs &lt;int&gt;, Blancs_ins &lt;dbl&gt;,
+## #   Blancs_vot &lt;dbl&gt;, Nuls &lt;int&gt;, Nuls_ins &lt;dbl&gt;, Nuls_vot &lt;dbl&gt;,
+## #   Exprimés &lt;int&gt;, Exprimés_ins &lt;dbl&gt;, Exprimés_vot &lt;dbl&gt;, `LE
+## #   PEN` &lt;int&gt;, MÉLENCHON &lt;int&gt;, MACRON &lt;int&gt;, FILLON &lt;int&gt;,
+## #   LASSALLE &lt;int&gt;, `DUPONT-AIGNAN` &lt;int&gt;, HAMON &lt;int&gt;, ASSELINEAU &lt;int&gt;,
+## #   POUTOU &lt;int&gt;, ARTHAUD &lt;int&gt;, CHEMINADE &lt;int&gt;, `LE PEN_ins` &lt;dbl&gt;,
+## #   MÉLENCHON_ins &lt;dbl&gt;, MACRON_ins &lt;dbl&gt;, FILLON_ins &lt;dbl&gt;,
+## #   LASSALLE_ins &lt;dbl&gt;, `DUPONT-AIGNAN_ins` &lt;dbl&gt;, HAMON_ins &lt;dbl&gt;,
+## #   ASSELINEAU_ins &lt;dbl&gt;, POUTOU_ins &lt;dbl&gt;, ARTHAUD_ins &lt;dbl&gt;,
+## #   CHEMINADE_ins &lt;dbl&gt;, `LE PEN_exp` &lt;dbl&gt;, MÉLENCHON_exp &lt;dbl&gt;,
+## #   MACRON_exp &lt;dbl&gt;, FILLON_exp &lt;dbl&gt;, LASSALLE_exp &lt;dbl&gt;,
+## #   `DUPONT-AIGNAN_exp` &lt;dbl&gt;, HAMON_exp &lt;dbl&gt;, ASSELINEAU_exp &lt;dbl&gt;,
+## #   POUTOU_exp &lt;dbl&gt;, ARTHAUD_exp &lt;dbl&gt;, CHEMINADE_exp &lt;dbl&gt;
+```
+
+---
+## Pivot
+
+
+```r
+library(tidyverse)
+pres2017T1_communes_long &lt;- pres2017T1_communes %&gt;% 
+  select(- contains("_ins")) %&gt;%
+  select(- contains("_exp")) %&gt;%   
+  gather(candidat, voix, `LE PEN`:CHEMINADE)
+
+pres2017T1_communes_long
+```
+
+```
+## # A tibble: 390,456 x 15
+##    CodeInsee CodeDepartement Département Commune Inscrits Abstentions
+##    &lt;chr&gt;     &lt;chr&gt;           &lt;chr&gt;       &lt;chr&gt;      &lt;int&gt;       &lt;int&gt;
+##  1 01001     01              Ain         L'Aber…      598          92
+##  2 01002     01              Ain         L'Aber…      209          25
+##  3 01004     01              Ain         Ambéri…     8586        1962
+##  4 01005     01              Ain         Ambéri…     1172         215
+##  5 01006     01              Ain         Ambléon       99          20
+##  6 01007     01              Ain         Ambron…     1880         268
+##  7 01008     01              Ain         Ambutr…      581          91
+##  8 01009     01              Ain         Andert…      254          41
+##  9 01010     01              Ain         Anglef…      738         136
+## 10 01011     01              Ain         Apremo…      275          43
+## # ... with 390,446 more rows, and 9 more variables: Votants &lt;int&gt;,
+## #   Blancs &lt;int&gt;, Blancs_vot &lt;dbl&gt;, Nuls &lt;int&gt;, Nuls_vot &lt;dbl&gt;,
+## #   Exprimés &lt;int&gt;, Exprimés_vot &lt;dbl&gt;, candidat &lt;chr&gt;, voix &lt;int&gt;
+```
+
+---
+## Modify
+
+
+```r
+pres2017T1_communes_long &lt;- pres2017T1_communes_long %&gt;% 
+  mutate(ins = voix / Inscrits * 100) %&gt;% 
+  mutate(exp = voix / Exprimés * 100) %&gt;%
+  print
+```
+
+```
+## # A tibble: 390,456 x 17
+##    CodeInsee CodeDepartement Département Commune Inscrits Abstentions
+##    &lt;chr&gt;     &lt;chr&gt;           &lt;chr&gt;       &lt;chr&gt;      &lt;int&gt;       &lt;int&gt;
+##  1 01001     01              Ain         L'Aber…      598          92
+##  2 01002     01              Ain         L'Aber…      209          25
+##  3 01004     01              Ain         Ambéri…     8586        1962
+##  4 01005     01              Ain         Ambéri…     1172         215
+##  5 01006     01              Ain         Ambléon       99          20
+##  6 01007     01              Ain         Ambron…     1880         268
+##  7 01008     01              Ain         Ambutr…      581          91
+##  8 01009     01              Ain         Andert…      254          41
+##  9 01010     01              Ain         Anglef…      738         136
+## 10 01011     01              Ain         Apremo…      275          43
+## # ... with 390,446 more rows, and 11 more variables: Votants &lt;int&gt;,
+## #   Blancs &lt;int&gt;, Blancs_vot &lt;dbl&gt;, Nuls &lt;int&gt;, Nuls_vot &lt;dbl&gt;,
+## #   Exprimés &lt;int&gt;, Exprimés_vot &lt;dbl&gt;, candidat &lt;chr&gt;, voix &lt;int&gt;,
+## #   ins &lt;dbl&gt;, exp &lt;dbl&gt;
+```
+
+---
+## Pivot again
+
+
+```r
+pres2017T1_communes_long %&gt;% 
+  gather(metrique, valeur, voix:exp) %&gt;% 
+  glimpse
+```
+
+```
+## Observations: 1,171,368
+## Variables: 16
+## $ CodeInsee       &lt;chr&gt; "01001", "01002", "01004", "01005", "01006", "...
+## $ CodeDepartement &lt;chr&gt; "01", "01", "01", "01", "01", "01", "01", "01"...
+## $ Département     &lt;chr&gt; "Ain", "Ain", "Ain", "Ain", "Ain", "Ain", "Ain...
+## $ Commune         &lt;chr&gt; "L'Abergement-Clémenciat", "L'Abergement-de-Va...
+## $ Inscrits        &lt;int&gt; 598, 209, 8586, 1172, 99, 1880, 581, 254, 738,...
+## $ Abstentions     &lt;int&gt; 92, 25, 1962, 215, 20, 268, 91, 41, 136, 43, 5...
+## $ Votants         &lt;int&gt; 506, 184, 6624, 957, 79, 1612, 490, 213, 602, ...
+## $ Blancs          &lt;int&gt; 2, 6, 114, 21, 2, 53, 12, 1, 2, 6, 0, 2, 33, 1...
+## $ Blancs_vot      &lt;dbl&gt; 0.3952569, 3.2608696, 1.7210145, 2.1943574, 2....
+## $ Nuls            &lt;int&gt; 9, 2, 58, 3, 0, 11, 5, 3, 11, 2, 7, 0, 12, 8, ...
+## $ Nuls_vot        &lt;dbl&gt; 1.7786561, 1.0869565, 0.8756039, 0.3134796, 0....
+## $ Exprimés        &lt;int&gt; 495, 176, 6452, 933, 77, 1548, 473, 209, 589, ...
+## $ Exprimés_vot    &lt;dbl&gt; 97.82609, 95.65217, 97.40338, 97.49216, 97.468...
+## $ candidat        &lt;chr&gt; "LE PEN", "LE PEN", "LE PEN", "LE PEN", "LE PE...
+## $ metrique        &lt;chr&gt; "voix", "voix", "voix", "voix", "voix", "voix"...
+## $ valeur          &lt;dbl&gt; 126, 48, 1667, 306, 18, 458, 135, 40, 207, 64,...
+```
+
+---
+## Pivot again
+
+
+```r
+pres2017T1_communes_long %&gt;% 
+  gather(metrique, valeur, voix:exp) %&gt;% 
+  unite(variable, candidat, metrique, sep = "_") %&gt;% 
+  glimpse
+```
+
+```
+## Observations: 1,171,368
+## Variables: 15
+## $ CodeInsee       &lt;chr&gt; "01001", "01002", "01004", "01005", "01006", "...
+## $ CodeDepartement &lt;chr&gt; "01", "01", "01", "01", "01", "01", "01", "01"...
+## $ Département     &lt;chr&gt; "Ain", "Ain", "Ain", "Ain", "Ain", "Ain", "Ain...
+## $ Commune         &lt;chr&gt; "L'Abergement-Clémenciat", "L'Abergement-de-Va...
+## $ Inscrits        &lt;int&gt; 598, 209, 8586, 1172, 99, 1880, 581, 254, 738,...
+## $ Abstentions     &lt;int&gt; 92, 25, 1962, 215, 20, 268, 91, 41, 136, 43, 5...
+## $ Votants         &lt;int&gt; 506, 184, 6624, 957, 79, 1612, 490, 213, 602, ...
+## $ Blancs          &lt;int&gt; 2, 6, 114, 21, 2, 53, 12, 1, 2, 6, 0, 2, 33, 1...
+## $ Blancs_vot      &lt;dbl&gt; 0.3952569, 3.2608696, 1.7210145, 2.1943574, 2....
+## $ Nuls            &lt;int&gt; 9, 2, 58, 3, 0, 11, 5, 3, 11, 2, 7, 0, 12, 8, ...
+## $ Nuls_vot        &lt;dbl&gt; 1.7786561, 1.0869565, 0.8756039, 0.3134796, 0....
+## $ Exprimés        &lt;int&gt; 495, 176, 6452, 933, 77, 1548, 473, 209, 589, ...
+## $ Exprimés_vot    &lt;dbl&gt; 97.82609, 95.65217, 97.40338, 97.49216, 97.468...
+## $ variable        &lt;chr&gt; "LE PEN_voix", "LE PEN_voix", "LE PEN_voix", "...
+## $ valeur          &lt;dbl&gt; 126, 48, 1667, 306, 18, 458, 135, 40, 207, 64,...
+```
+
+---
+## Pivot again
+
+
+```r
+pres2017T1_communes_long %&gt;% 
+  gather(metrique, valeur, voix:exp) %&gt;% 
+  unite(variable, candidat, metrique, sep = "_") %&gt;% 
+  spread(variable, valeur) %&gt;% 
+  glimpse
+```
+
+```
+## Observations: 35,496
+## Variables: 46
+## $ CodeInsee            &lt;chr&gt; "01001", "01002", "01004", "01005", "0100...
+## $ CodeDepartement      &lt;chr&gt; "01", "01", "01", "01", "01", "01", "01",...
+## $ Département          &lt;chr&gt; "Ain", "Ain", "Ain", "Ain", "Ain", "Ain",...
+## $ Commune              &lt;chr&gt; "L'Abergement-Clémenciat", "L'Abergement-...
+## $ Inscrits             &lt;int&gt; 598, 209, 8586, 1172, 99, 1880, 581, 254,...
+## $ Abstentions          &lt;int&gt; 92, 25, 1962, 215, 20, 268, 91, 41, 136, ...
+## $ Votants              &lt;int&gt; 506, 184, 6624, 957, 79, 1612, 490, 213, ...
+## $ Blancs               &lt;int&gt; 2, 6, 114, 21, 2, 53, 12, 1, 2, 6, 0, 2, ...
+## $ Blancs_vot           &lt;dbl&gt; 0.3952569, 3.2608696, 1.7210145, 2.194357...
+## $ Nuls                 &lt;int&gt; 9, 2, 58, 3, 0, 11, 5, 3, 11, 2, 7, 0, 12...
+## $ Nuls_vot             &lt;dbl&gt; 1.7786561, 1.0869565, 0.8756039, 0.313479...
+## $ Exprimés             &lt;int&gt; 495, 176, 6452, 933, 77, 1548, 473, 209, ...
+## $ Exprimés_vot         &lt;dbl&gt; 97.82609, 95.65217, 97.40338, 97.49216, 9...
+## $ ARTHAUD_exp          &lt;dbl&gt; 0.8080808, 1.1363636, 0.6199628, 0.535905...
+## $ ARTHAUD_ins          &lt;dbl&gt; 0.6688963, 0.9569378, 0.4658747, 0.426621...
+## $ ARTHAUD_voix         &lt;dbl&gt; 4, 2, 40, 5, 1, 9, 3, 0, 3, 4, 2, 2, 9, 3...
+## $ ASSELINEAU_exp       &lt;dbl&gt; 1.2121212, 0.5681818, 1.1004340, 1.071811...
+## $ ASSELINEAU_ins       &lt;dbl&gt; 1.0033445, 0.4784689, 0.8269276, 0.853242...
+## $ ASSELINEAU_voix      &lt;dbl&gt; 6, 1, 71, 10, 0, 11, 2, 6, 10, 1, 0, 2, 2...
+## $ CHEMINADE_exp        &lt;dbl&gt; 0.40404040, 0.00000000, 0.07749535, 0.000...
+## $ CHEMINADE_ins        &lt;dbl&gt; 0.33444816, 0.00000000, 0.05823433, 0.000...
+## $ CHEMINADE_voix       &lt;dbl&gt; 2, 0, 5, 0, 0, 1, 3, 0, 1, 0, 1, 0, 2, 2,...
+## $ `DUPONT-AIGNAN_exp`  &lt;dbl&gt; 6.868687, 3.409091, 5.362678, 4.823151, 5...
+## $ `DUPONT-AIGNAN_ins`  &lt;dbl&gt; 5.685619, 2.870813, 4.029816, 3.839590, 4...
+## $ `DUPONT-AIGNAN_voix` &lt;dbl&gt; 34, 6, 346, 45, 4, 80, 28, 6, 33, 9, 10, ...
+## $ FILLON_exp           &lt;dbl&gt; 22.22222, 19.31818, 16.80099, 21.11468, 1...
+## $ FILLON_ins           &lt;dbl&gt; 18.394649, 16.267943, 12.625204, 16.80887...
+## $ FILLON_voix          &lt;dbl&gt; 110, 34, 1084, 197, 14, 233, 84, 44, 83, ...
+## $ HAMON_exp            &lt;dbl&gt; 5.8585859, 7.3863636, 5.3316801, 3.965702...
+## $ HAMON_ins            &lt;dbl&gt; 4.8494983, 6.2200957, 4.0065222, 3.156996...
+## $ HAMON_voix           &lt;dbl&gt; 29, 13, 344, 37, 3, 82, 23, 8, 20, 13, 10...
+## $ LASSALLE_exp         &lt;dbl&gt; 0.4040404, 0.0000000, 0.9299442, 0.643086...
+## $ LASSALLE_ins         &lt;dbl&gt; 0.3344482, 0.0000000, 0.6988120, 0.511945...
+## $ LASSALLE_voix        &lt;dbl&gt; 2, 0, 60, 6, 1, 13, 3, 8, 14, 4, 2, 0, 21...
+## $ `LE PEN_exp`         &lt;dbl&gt; 25.45455, 27.27273, 25.83695, 32.79743, 2...
+## $ `LE PEN_ins`         &lt;dbl&gt; 21.07023, 22.96651, 19.41533, 26.10922, 1...
+## $ `LE PEN_voix`        &lt;dbl&gt; 126, 48, 1667, 306, 18, 458, 135, 40, 207...
+## $ MACRON_exp           &lt;dbl&gt; 24.040404, 21.022727, 20.644761, 20.47159...
+## $ MACRON_ins           &lt;dbl&gt; 19.899666, 17.703349, 15.513627, 16.29692...
+## $ MACRON_voix          &lt;dbl&gt; 119, 37, 1332, 191, 15, 348, 95, 55, 110,...
+## $ MÉLENCHON_exp        &lt;dbl&gt; 11.91919, 18.75000, 21.88469, 13.50482, 2...
+## $ MÉLENCHON_ins        &lt;dbl&gt; 9.866221, 15.789474, 16.445376, 10.750853...
+## $ MÉLENCHON_voix       &lt;dbl&gt; 59, 33, 1412, 126, 19, 296, 89, 39, 103, ...
+## $ POUTOU_exp           &lt;dbl&gt; 0.8080808, 1.1363636, 1.4104154, 1.071811...
+## $ POUTOU_ins           &lt;dbl&gt; 0.6688963, 0.9569378, 1.0598649, 0.853242...
+## $ POUTOU_voix          &lt;dbl&gt; 4, 2, 91, 10, 2, 17, 8, 3, 5, 4, 2, 2, 15...
+```
 
 
 ---
@@ -147,8 +468,15 @@ https://github.com/CMARUE/APIs
 "highlightLines": true,
 "countIncrementalSlides": false
 });
-if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {window.dispatchEvent(new Event('resize'));});
-(function() {var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler"); if (!r) return; s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }"; d.head.appendChild(s);})();</script>
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
 
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({

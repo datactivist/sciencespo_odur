@@ -4,23 +4,26 @@ subtitle: "Class 3/4: clean data"
 author: "Joël Gombin (Datactivist)"
 date: "Sciences Po, master Governing the Large Metropolis"
 output:
-  xaringan::moon_reader:
-    css: [default, xaringan.css]
+  SlidesDatactivist::moon_reader:
+    css: [default, datactivist, datactivist-fonts]
     lib_dir: libs
     nature:
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
+params:
+  event: Sciences Po - GLM
+  slug: sciencespo_odur2018
 ---
 class: center, middle
 
-Find the course materials on Github https://github.com/datactivist/sciencespo_odur2017/
+Find the course materials on Github : https://github.com/datactivist/sciencespo_odur2018/
 
-These slides online: http://datactivi.st/sciencespo_odur2017/class3/
+These slides online: https://datactivist.coop/sciencespo_odur2018/class3/
 
-Content created by Datactivist is placed under [Creative Commons CC-BY-SA licence](https://creativecommons.org/licenses/by-sa/3.0/deed.fr). 
+Content created by Datactivist is placed under a [Creative Commons 4.0 BY-SA licence](https://creativecommons.org/licenses/by-sa/4.0/legalcode.fr). 
 
-<img src="./img/Logo_DATACTIVIST_TW.png" height="100px" />
+<img src="./img/Logo_DATACTIVIST_TW.png" height="200px" />
 
 ---
 #Objectives of this course
@@ -37,13 +40,13 @@ Content created by Datactivist is placed under [Creative Commons CC-BY-SA licenc
 ---
 #Overview of the course
 .pull-left[
-**Class 1 (17/10/20 - Samuel Goëta)** FIND and GET data
+**Class 1 (18/09/27 - Samuel Goëta)** FIND and GET data
 
-**Class 2 (17/10/4 - Samuel Goëta)** VERIFY data
+**Class 2 (18/10/11 - Samuel Goëta)** VERIFY data
 
-**Class 3 (17/10/25, 4-7pm - Joël Gombin)** CLEAN data
+**Class 3 (18/10/24 - Joël Gombin)** CLEAN data
 
-** Class 4 (17/11/23, 4-7pm - François Briatte)** VERIFY and PRESENT data
+** Class 4 (18/11/08, 5-8pm - François Briatte)** PRESENT data
 ]
 .pull-right[
 ![](img/oc.png)]
@@ -114,6 +117,167 @@ class: center, middle, inverse
 ---
 ## The tidy data framework
 
+> “Happy families are all alike; every unhappy family is unhappy in its own way.” – Tolstoï
+
+> “Tidy datasets are all alike, but every messy dataset is messy in its own way.” – Hadley Wickham
+
+
+1. Each variable forms a column.
+
+2. Each observation forms a row.
+
+3. Each type of observational unit forms a table / Each cell has one and only one value. 
+
+---
+## The tidy data framework
+
+```{r, echo = FALSE, out.width='90%', fig.align='center'}
+knitr::include_graphics("./img/tidy-1.png")
+``` 
+
+
+---
+## The tidy data framework
+
+1. Each variable forms a column.
+
+2. Each observation forms a row.
+
+3. Each type of observational unit forms a table.
+
+---
+## Tidying data with R
+
+Meet the tidyverse !
+
+.center[![](./img/tidyverse.png)]
+
+---
+## Tidying data with R
+
+- the `tidyverse` metapackage
+
+- `dplyr` and `tidyr`
+
+- the pipe : `%>%` (Ctrl/Cmd + shift + M)
+
+- the verbs : 
+  + `filter` (and `slice`)
+  + `arrange`
+  + `select` (and `rename`)
+  + `distinct`
+  + `mutate` 
+  + `group_by` 
+  + `summarise`
+  + `sample_n` / `sample_frac`
+
+- the `stringr` package may be a useful companion (for strings manipulation / regex)
+
+
+---
+## Pivot
+
+`gather` and `spread`
+
+```{r, echo = FALSE, out.width='90%', fig.align='center'}
+knitr::include_graphics("http://r4ds.had.co.nz/images/tidy-9.png")
+```
+
+---
+## Pivot
+
+
+```{r, echo=TRUE}
+
+library(tidyverse)
+pres2017T1_communes <- read_csv("./data/Presidentielle_2017_Resultats_Communes_T1_clean.csv",
+                       na = "",
+                       col_types = cols(
+  .default = col_double(),
+  CodeInsee = col_character(),
+  CodeDepartement = col_character(),
+  Département = col_character(),
+  Commune = col_character(),
+  Inscrits = col_integer(),
+  Abstentions = col_integer(),
+  Votants = col_integer(),
+  Blancs = col_integer(),
+  Nuls = col_integer(),
+  Exprimés = col_integer(),
+  `LE PEN` = col_integer(),
+  MÉLENCHON = col_integer(),
+  MACRON = col_integer(),
+  FILLON = col_integer(),
+  LASSALLE = col_integer(),
+  `DUPONT-AIGNAN` = col_integer(),
+  HAMON = col_integer(),
+  ASSELINEAU = col_integer(),
+  POUTOU = col_integer(),
+  ARTHAUD = col_integer(),
+  CHEMINADE = col_integer()
+  )
+)
+```
+
+---
+## Pivot
+
+```{r, echo=FALSE}
+pres2017T1_communes
+```
+
+---
+## Pivot
+
+```{r}
+library(tidyverse)
+pres2017T1_communes_long <- pres2017T1_communes %>% 
+  select(- contains("_ins")) %>%
+  select(- contains("_exp")) %>%   
+  gather(candidat, voix, `LE PEN`:CHEMINADE)
+
+pres2017T1_communes_long
+```
+
+---
+## Modify
+
+```{r}
+pres2017T1_communes_long <- pres2017T1_communes_long %>% 
+  mutate(ins = voix / Inscrits * 100) %>% 
+  mutate(exp = voix / Exprimés * 100) %>%
+  print
+```
+
+---
+## Pivot again
+
+```{r}
+pres2017T1_communes_long %>% 
+  gather(metrique, valeur, voix:exp) %>% 
+  glimpse
+```
+
+---
+## Pivot again
+
+```{r}
+pres2017T1_communes_long %>% 
+  gather(metrique, valeur, voix:exp) %>% 
+  unite(variable, candidat, metrique, sep = "_") %>% 
+  glimpse
+```
+
+---
+## Pivot again
+
+```{r}
+pres2017T1_communes_long %>% 
+  gather(metrique, valeur, voix:exp) %>% 
+  unite(variable, candidat, metrique, sep = "_") %>% 
+  spread(variable, valeur) %>% 
+  glimpse
+```
 
 
 ---

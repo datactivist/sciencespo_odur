@@ -8,12 +8,12 @@ The repository contains four __practical demos__, all of which use [R][r].
 
 A replication of John Snow's map of [cholera in London, 1854](https://en.wikipedia.org/wiki/1854_Broad_Street_cholera_outbreak), largely inspired by [Arthur Charpentier's blog posts](https://freakonometrics.hypotheses.org/tag/cholera).
 
-The code requires the [ggplot2][r-ggplot2] and [rleaflet][r-rleaflet] packages, the second of which provides a backend to the [Leaflet][js-leaflet] JavaScript library.
-
-The data used in the demo (and included in the repository) come from Michael Friendly _et al._'s [HistData][r-histdata] package.
+The code requires the [ggplot2][r-ggplot2] package. The data used in the demo are included in the repository and come from Michael Friendly _et al._'s [HistData][r-histdata] package.
 
 ## 2. 
 
+and [rleaflet][r-rleaflet] packages, the second of which provides a backend to the [Leaflet][js-leaflet] JavaScript library.
+ 
 ## 3. 
 
 ## 4. 
@@ -23,9 +23,8 @@ The data used in the demo (and included in the repository) come from Michael Fri
 Enjoy!
 
 [doc-email]: class4-email.md
-[doc-syllabus]: /
-[doc-slides]: class4-slides.pdf
-[doc-slides-online]: https://frama.link/odur-2018-s4
+[doc-syllabus]: https://frama.link/odur-2018
+[doc-slides]: https://frama.link/odur-2018-s4
 
 [js-leaflet]: /
 

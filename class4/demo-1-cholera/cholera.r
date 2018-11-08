@@ -12,7 +12,7 @@
 #
 # ==============================================================================
 
-# load required packages
+# load required package
 
 library(ggplot2) # 3.0.0
 

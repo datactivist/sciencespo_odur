@@ -2,7 +2,7 @@ A session on __how to present data__, illustrated with __(spatial) visualization
 
 See the [course syllabus][doc-syllabus], the [introductory email][doc-email] and [slides 50–_sq._][doc-slides] of the session for context.
 
-The repository contains two __practical demos__, all of which use [R][r].
+The repository contains two __practical demos__, both of which use [R][r].
 
 To install the dependencies:
 
@@ -32,7 +32,7 @@ Enjoy!
 [doc-syllabus]: https://frama.link/odur-2018
 [doc-slides]: https://frama.link/odur-2018-s4
 
-[js-leaflet]: /
+[js-leaflet]: https://leafletjs.com/
 
 [r]: https://www.r-project.org/
 

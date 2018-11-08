@@ -1,6 +1,6 @@
 A session on __how to present data__, illustrated with __(spatial) visualizations__ of __(open) urban data__.
 
-See the [course syllabus][doc-syllabus], the [introductory email][doc-email] and the second part of the [slides][doc-slides]) (slides 50–_sq._, also available online at [this address][doc-slides-online]) for context.
+See the [course syllabus][doc-syllabus], the [introductory email][doc-email] and [slides 50–_sq._][doc-slides] of the session for context.
 
 The repository contains four __practical demos__, all of which use [R][r].
 

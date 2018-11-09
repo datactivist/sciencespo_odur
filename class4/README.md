@@ -12,17 +12,17 @@ install.packages(c('ggplot2', 'rleafmap'))
 
 ## 1. Cholera deaths in London, 1854
 
-A replication of John Snow's map of [cholera in London, 1854](https://en.wikipedia.org/wiki/1854_Broad_Street_cholera_outbreak), largely inspired by [Arthur Charpentier's blog posts](https://freakonometrics.hypotheses.org/tag/cholera).
+Replicates John Snow's map of [cholera in London, 1854](https://en.wikipedia.org/wiki/1854_Broad_Street_cholera_outbreak), largely inspired by [Arthur Charpentier's blog posts](https://freakonometrics.hypotheses.org/tag/cholera).
 
-The code requires the [ggplot2][r-ggplot2] package.
+The code requires the [`ggplot2`][r-ggplot2] package.
 
-The data used in the demo are included in the repository and come from Michael Friendly _et al._'s [HistData][r-histdata] package.
+The data used in the demo are included in the repository and come from Michael Friendly _et al._'s [`HistData`][r-histdata] package.
 
-## 2. Bicycle sharing in Lyon, France
+## 2. Bicycle sharing in Lyon, France, 2014
 
-A replication of François Keck's demo examples for his [rleafmap][r-rleafmap] package, which provides a simple backend to the [Leaflet][js-leaflet] JavaScript library.
+Replicates François Keck's example for his [`rleafmap`][r-rleafmap] package, which provides a backend to the [Leaflet][js-leaflet] JavaScript library.
 
-Both the code and data for this example come from the [rleafmap][r-rleafmap] package and website.
+Both the code and data for this example come from the [`rleafmap`][r-rleafmap] package and website.
 
 * * *
 

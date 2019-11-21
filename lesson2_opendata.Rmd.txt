@@ -1,0 +1,765 @@
+---
+title: "Open Data, Myths and Reality"
+subtitle: "Data and Algorithms for Public Policy"
+author: "Timothée Gidoin"
+date: "Sciences Po, `r Sys.Date()`"
+output:
+  SlidesDatactivist::moon_reader:
+    css: [default, sciencespo, sciencespo-fonts]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      beforeInit: "macros.js"
+      slideNumberFormat: |
+        <div class="progress-bar-container">
+          <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
+          </div>
+        </div>
+params:
+  event: Data and Algorithms for Public Policy - Lesson 2 "Open Data, Myths and Reality"
+  slug: lesson2_opendata.html
+---
+
+layout: true
+
+<style>
+.remark-slide-number {
+  position: inherit;
+}
+
+.remark-slide-number .progress-bar-container {
+  position: absolute;
+  bottom: 0;
+  height: 5px;
+  display: block;
+  left: 0;
+  right: 0;
+}
+
+.remark-slide-number .progress-bar {
+  height: 100%;
+  background-color: #14e6cd;
+}
+
+</style>
+
+
+`r paste0("<div class='my-footer'><span>", params$event, "</span> <center><div class=logo><img src='https://newsroom.sciencespo.fr/wp-content/uploads/2017/11/827693-297x109.png' width='100px'></center></span></div>")`
+
+---
+## Before we start
+
+<BR>
+
+Slides : `r paste0("https://gidoin.github.io/sciencespodata/", params$slug)`
+
+Sources : `r paste0("https://github.com/Gidoin/sciencespodata/")`
+
+This production is freely reusable under the terms of the licence  [Creative Commons 4.0 BY-SA](https://creativecommons.org/licenses/by-sa/4.0/legalcode.fr).
+
+.center[*The content of this presentation is partly inspired by other presentations made by Datactivist team. I warmly thank them and notably [Joël Gombin](https://twitter.com/joelgombin) for his help.*]
+
+<BR>
+
+.center[<img src="./img/ccbysa.png" height="100"/>] 
+
+---
+
+## Before we start
+
+
+.pull-left[
+.center[<img src="./img/simonchignard.jpg" height="135"/>]
+
+.center[<img src="./img/jeanmarie.jpg" height="135"/>]
+
+.center[<img src="./img/phototimcrop.jpg" height="135"/>]
+]
+
+.pull-right[ 
+**[Simon Chignard](simon.chignard@sciencespo.fr)** is an expert in Open Data. He published in 2015 a best-seller book, [Datanomics](https://livre.fnac.com/a7870543/Simon-Chignard-Datanomics), and advises Prime Minister services. [Twitter](https://twitter.com/schignard?lang=fr)
+
+
+**[Jean-Marie John Mathews](jeanmarie.johnmathews@sciencespo.fr)**
+is a data Scientist and PhD student in algorithmics on the impacts of so-called "ethical by design" algorithms in artificial intelligence, he works with the [Medialab](https://medialab.sciencespo.fr)
+
+
+**[Timothée Gidoin](timothee.gidoin@sciencespo.fr)** cofounded [Datagora](https://datagora.fr) an initiative that aims to democratize reliable sources. He works in paralell for [Datactivist](https://datactivist.coop/fr/) as an Open Data consultant. [Twitter](https://twitter.com/tgidoin?lang=fr)
+
+]
+
+
+---
+## Before we start: reminder
+
+.center[<img src="./img/agendascpo.png" height="400"/>]
+
+---
+## Before we start: reminder
+
+- **Midterm Exam** : 
+  - **25% of your total grade** 
+  - By group of .red[2 students] 
+  - Data manipulation, analysis visualisation exercise based on open data
+  - To be submitted before .red[18/10] 11:59 pm (more details to come)
+
+- **Final Exam** : 
+  - **75% of your total grade**
+  - By group of .red[4 students]
+  - 10-pages paper on the analysis of 3 uses cases (outside France) in one of the following topics: social benefits, police / justice, education, public sector human
+resources
+  - 1 oral presentation (15 min) during the last session 
+  - 1 Medium blog post (1,5 pages) to present your findings
+  - Evaluation of final exam: 50% quality of the analysis, 25% oral presentation, 25%
+quality of Medium blogpost
+
+---
+## May the data be with you !
+
+.center[<img src="https://media.giphy.com/media/3o7aDgsiRMtIlrSZpu/giphy.gif" height="400"/>]
+
+---
+class: inverse, center, middle
+
+# Data
+
+---
+## What are data ?
+
+.center[<img src="https://media.giphy.com/media/LrGHJGtTbT7PO/giphy.gif" height="400"/>]
+
+---
+## What are data ?
+
+> *Une donnée correspond à la représentation d'une information sous une forme conventionnelle destinée à faciliter son traitement*
+
+> *Data correspond to the representation of information in a .red[conventional form] intended to facilitate its processing*
+
+.center[<img src="./img/guidepratique.png" height="300"/>]
+
+.footnote[[CNIL & CADA's Open Data Practical Guide, *in French*](https://www.cnil.fr/sites/default/files/atoms/files/guide_open_data.pdf)]
+
+---
+Class:
+## Data-Information-Knowledge-Wisdom pyramid
+
+.pull-left[
+[![largeur](./img/pyramid.svg)](https://commons.wikimedia.org/w/index.php?curid=37705247)
+]
+
+.pull-right[Attributed to [Russell Ackoff](http://en.wikipedia.org/wiki/Russell_L._Ackoff), 1989
+
+Data may be :
+
+- Facts
+- signals
+- symbols]
+
+---
+
+## What are data ?
+
+.pull-left[.reduite3[
+![](img/kitchin.jpg)
+
+⏺ enregistrabilité +🏗 briques de base ("*buildings blocks*")]]
+.pull-right[
+> *Data are commonly understood to be the raw material produced by **abstracting the world** into categories, measures and other representational forms – numbers, characters, symbols, images,sounds, electromagnetic waves, bits – that constitute the **building blocks** from which information and knowledge are created.*]
+
+---
+
+# Data or capta ?
+
+> Technically, what we understand as data are actually **capta** (derived from the Latin capere, meaning ‘to take’); those units of data that have been **selected and harvested** from the sum of all potential data.
+
+[Kitchin, 2014](https://books.google.fr/books?hl=fr&lr=&id=GfOICwAAQBAJ&oi=fnd&pg=PP1&dq=kitchin+data+revolution&ots=pcyfMTZh-V&sig=dQyPTL3AIN_4RdWvtBFw4VjdAa4#v=onepage&q=kitchin%20data%20revolution&f=false)
+
+.center[<img src="./img/robkitchin.jpg" height="250"/>] 
+
+---
+## Data are cool !
+
+> **US Air traffic on September 11th 2001**
+
+.center[<img src="https://i.imgur.com/X10kmms.gif" height="400"/>]
+
+.footnote[[Source](https://www.reddit.com/r/Damnthatsinteresting/comments/d2gj7z/us_air_traffic_on_september_11_2001/)]
+
+---
+## Data are cool !
+
+> **"100 years of world cuisine"**
+
+.center[<img src="./img/datavizdeaths.png" height="400"/>]
+
+.footnote[[NKB Dataviz](https://owni.fr/2011/05/11/guerre-et-cuisine/index.html)]
+
+---
+## Data are cool !
+
+.center[<img src="./img/tricot.png" height="450"/>]
+
+.footnote[[Source](https://twitter.com/montgomerysue/status/1128093628738482177)]
+
+---
+## Data are cool !
+
+.center[<img src="./img/violenceandimmigration.png" height="400"/>]
+
+.footnote[[Source](https://www.themarshallproject.org/2018/03/30/the-myth-of-the-criminal-immigrant)]
+
+---
+Class:
+## Data are cool !
+
+.pull-left[<img src="./img/ainbnb1.png" height="250"/>
+
+Number of Airbnb appartments available in Paris
+]
+
+.pull-right[<img src="./img/airbnb2.png" height="250"/>
+
+Average price of Airbnb appartments in Paris
+]
+
+.footnote[[Source](https://www.sites.univ-rennes2.fr/mastersigat/B_Mericskay/WebGL.html)]
+
+---
+## Data are cool !
+
+<iframe style="width: 80vw; height: 50vh; border: none;" src="https://query.wikidata.org/embed.html#%23defaultView%3AImageGrid%0ASELECT%20%3Fcocktail%20%3FcocktailLabel%20(SAMPLE(%3Frecipe)%20AS%20%3Frecipe)%20(SAMPLE(%3Fimage)%20AS%20%3Fimage)%0AWHERE%0A%7B%0A%20%20%7B%0A%20%20%20%20SELECT%20%3Fcocktail%20%3FcocktailLabel%20(GROUP_CONCAT(DISTINCT%20%3Fingredient%3B%20separator%3D%22%2C%20%22)%20AS%20%3FingredientsList)%20(GROUP_CONCAT(DISTINCT%20%3FgarnishLabel%3B%20separator%3D%22%2C%20%22)%20AS%20%3FgarnishList)%20(COUNT(DISTINCT%20%3Fingredient)%20%2B%20COUNT(DISTINCT%20%3FgarnishLabel)%20AS%20%3Fcount)%0A%20%20%20%20WHERE%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%3Fcocktail%20wdt%3AP31%2Fwdt%3AP279*%20wd%3AQ134768%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20p%3AP186%20%3FmaterialStat.%0A%20%20%20%20%20%20MINUS%20%7B%20%3FmaterialStat%20pq%3AP518%2Fwdt%3AP279*%20wd%3AQ2453629.%20%7D%0A%20%20%20%20%20%20MINUS%20%7B%20%3FmaterialStat%20ps%3AP186%20wd%3AQ488463%3B%20pq%3AP366%20wd%3AQ26876981.%20%7D%0A%20%20%20%20%20%20MINUS%20%7B%20%3FmaterialStat%20pq%3AP366%20wd%3AQ59541.%20%7D%0A%20%20%20%20%20%20%3FmaterialStat%20ps%3AP186%2Frdfs%3Alabel%20%3FmaterialLabel.%0A%20%20%20%20%20%20FILTER(LANG(%3FmaterialLabel)%20%3D%20%22en%22).%0A%20%20%20%20%20%20BIND(%3FmaterialLabel%20AS%20%3FingredientSolo).%0A%20%20%20%20%20%20OPTIONAL%20%7B%0A%20%20%20%20%20%20%20%20%3FmaterialStat%20ps%3AP186%2Frdfs%3Alabel%20%3FmaterialLabel%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20pq%3AP1114%20%3Fquantity.%0A%20%20%20%20%20%20%20%20FILTER(LANG(%3FmaterialLabel)%20%3D%20%22en%22).%0A%20%20%20%20%20%20%20%20BIND(CONCAT(STR(%3Fquantity)%2C%20%22%20%22%2C%20%3FmaterialLabel)%20AS%20%3FingredientWithQuantity).%0A%20%20%20%20%20%20%20%20OPTIONAL%20%7B%0A%20%20%20%20%20%20%20%20%20%20%3FmaterialStat%20pq%3AP1114%20%3Fquantity%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20ps%3AP186%2Frdfs%3Alabel%20%3FmaterialLabel%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20pqv%3AP1114%2Fwikibase%3AquantityUnit%20%3Funit.%0A%20%20%20%20%20%20%20%20%20%20FILTER(LANG(%3FmaterialLabel)%20%3D%20%22en%22).%0A%20%20%20%20%20%20%20%20%20%20FILTER(%3Funit%20!%3D%20wd%3AQ199).%0A%20%20%20%20%20%20%20%20%20%20%3Funit%20rdfs%3Alabel%20%3FunitLabel.%0A%20%20%20%20%20%20%20%20%20%20FILTER(LANG(%3FunitLabel)%20%3D%20%22en%22).%0A%20%20%20%20%20%20%20%20%20%20BIND(CONCAT(STR(%3Fquantity)%2C%20%22%20%22%2C%20IF(%3Fquantity%20%3D%201%2C%20%3FunitLabel%2C%20CONCAT(%3FunitLabel%2C%20IF(STRENDS(%3FunitLabel%2C%20%22sh%22)%2C%20%22es%22%2C%20%22s%22)))%2C%20%22%20%22%2C%20%3FmaterialLabel)%20AS%20%3FingredientWithUnit).%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20BIND(COALESCE(%3FingredientWithUnit%2C%20%3FingredientWithQuantity%2C%20%3FingredientSolo)%20AS%20%3Fingredient).%0A%20%20%20%20%20%20OPTIONAL%20%7B%0A%20%20%20%20%20%20%20%20%3Fcocktail%20p%3AP186%20%5B%20ps%3AP186%20%3Fgarnish%3B%20pq%3AP366%20wd%3AQ59541%20%5D.%0A%20%20%20%20%20%20%20%20%3Fgarnish%20rdfs%3Alabel%20%3FgarnishLabel.%0A%20%20%20%20%20%20%20%20FILTER(LANG(%3FgarnishLabel)%20%3D%20%22en%22).%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%3Fcocktail%20rdfs%3Alabel%20%3FcocktailLabel.%0A%20%20%20%20%20%20FILTER(LANG(%3FcocktailLabel)%20%3D%20%22en%22).%0A%20%20%20%20%7D%0A%20%20%20%20GROUP%20BY%20%3Fcocktail%20%3FcocktailLabel%0A%20%20%7D%0A%20%20BIND(%0A%20%20%20%20IF(REGEX(%3FingredientsList%2C%20%22%2C%20.*%2C%22)%2C%0A%20%20%20%20%20%20%20REPLACE(%3FingredientsList%2C%20%22(.*)%2C%20(.*)%22%2C%20%22%241%2C%20and%20%242%22)%2C%0A%20%20%20%20%20%20%20REPLACE(%3FingredientsList%2C%20%22(.*)%2C%20(.*)%22%2C%20%22%241%20and%20%242%22))%0A%20%20%20%20AS%20%3Fingredients).%0A%20%20BIND(%0A%20%20%20%20IF(REGEX(%3FgarnishList%2C%20%22%2C%20.*%2C%22)%2C%0A%20%20%20%20%20%20%20REPLACE(%3FgarnishList%2C%20%22(.*)%2C%20(.*)%22%2C%20%22%241%2C%20and%20%242%22)%2C%0A%20%20%20%20%20%20%20REPLACE(%3FgarnishList%2C%20%22(.*)%2C%20(.*)%22%2C%20%22%241%20and%20%242%22))%0A%20%20%20%20AS%20%3Fgarnishes).%0A%20%20OPTIONAL%20%7B%0A%20%20%20%20%3Fcocktail%20p%3AP186%20%5B%20ps%3AP186%20%3Fglass%3B%20pq%3AP518%2Fwdt%3AP279*%20wd%3AQ2453629%20%5D.%0A%20%20%20%20%3Fglass%20rdfs%3Alabel%20%3FglassLabel.%0A%20%20%20%20FILTER(LANG(%3FglassLabel)%20%3D%20%22en%22).%0A%20%20%20%20BIND(IF(REGEX(%3FglassLabel%2C%20%22%5E%5BAEIOUaeiou%5D%22)%2C%20%22an%22%2C%20%22a%22)%20AS%20%3Farticle).%0A%20%20%20%20BIND(CONCAT(%22%20in%20%22%2C%20%3Farticle%2C%20%22%20%22%2C%20%3FglassLabel)%20AS%20%3Fcontainer).%0A%20%20%20%20BIND(%22%2C%20served%22%20AS%20%3Fserved).%0A%20%20%7D%0A%20%20OPTIONAL%20%7B%0A%20%20%20%20%3Fcocktail%20p%3AP186%20%5B%20ps%3AP186%20wd%3AQ488463%3B%20pq%3AP366%20wd%3AQ26876981%20%5D.%0A%20%20%20%20BIND(%22%20on%20the%20rocks%22%20AS%20%3FonTheRocks).%0A%20%20%20%20BIND(%22%2C%20served%22%20AS%20%3Fserved).%0A%20%20%7D%0A%20%20OPTIONAL%20%7B%0A%20%20%20%20FILTER(STRLEN(STR(%3Fgarnishes))%20%3E%201).%0A%20%20%20%20BIND(CONCAT(%22%20with%20%22%2C%20%3Fgarnishes)%20AS%20%3Fgarnish).%0A%20%20%20%20BIND(%22%2C%20served%22%20AS%20%3Fserved).%0A%20%20%7D%0A%20%20BIND(CONCAT(%0A%20%20%20%20%3Fingredients%2C%0A%20%20%20%20COALESCE(%3Fserved%2C%20%22%22)%2C%0A%20%20%20%20COALESCE(%3FonTheRocks%2C%20%22%22)%2C%0A%20%20%20%20COALESCE(%3Fgarnish%2C%20%22%22)%2C%0A%20%20%20%20COALESCE(%3Fcontainer%2C%20%22%22))%0A%20%20%20%20AS%20%3Frecipe).%0A%20%20OPTIONAL%20%7B%20%3Fcocktail%20wdt%3AP18%20%3Fimage.%20%7D%0A%7D%0AGROUP%20BY%20%3Fcocktail%20%3FcocktailLabel%0AORDER%20BY%20DESC(MAX(%3Fcount))" referrerpolicy="origin" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
+
+
+---
+class: inverse, center, middle
+
+# Open data
+
+---
+## A talk to start..
+
+.center[<img src="./img/rawdatanow.png" height="400" />]
+
+[Start the Ted talk at 09:00](https://www.ted.com/talks/tim_berners_lee_on_the_next_web#t-535280)
+
+---
+## Open data : definition
+
+According to Wikipedia, open data is :
+> Open data is the idea that some data should be freely available to everyone to use and republish as they wish. One of the most important forms of open data is open government data (OGD), which is a form of open data created by ruling institutions.
+
+**Open data is both a idealogical movement and a practical way of publishing data freely available and usable**
+
+According to [French Government](https://www.gouvernement.fr/action/l-ouverture-des-donnees-publiques) :
+
+> Open data deals with the effort that public organisms do in order to share the data that they own. This opening has to be done **for free, in public format and allow reuse of data**
+
+French law considers that data produced/owned by public administrations/local authorities have to be made available to everyone.
+--
+**This doesn't include private informations or data that may harm the national security**
+
+---
+class: 
+## Why should Gov open data ?
+
+.center[<img src="https://media.giphy.com/media/vzvFGQs0P013i/giphy.gif" height="250" />]
+
+--
+
+- **Innovation**
+
+- **Modernisation**
+
+- **Transparency** 
+
+- **Economic opportunities**
+
+---
+## Open data : key milestones
+
+![](img/chrono.png)
+
+---
+
+## 7th December 2007 : Sebastopol meeting 
+
+.pull-left[
+👥 **What ?** : A meeting of the Open Government Group in Sebastopol (California), headquarters of O'Reilly editions
+
+🎯 **Why ?** : Influence the future president of the US to boost and implement Open Data
+
+📜 **How ?** : By adopting a declaration that define the key principles of Open Government Data
+
+]
+.pull-right[
+![](img/photofamille.jpg)
+]
+
+---
+class: middle, center
+
+## 1. Completeness
+
+--
+
+#### Datasets released by the government should be as complete as possible, .red[reflecting the entirety of what is recorded] about a particular subject. 
+
+#### All raw information from a dataset should be released to the public, .red[except to private information] and information that may be sensitive for .red[national safety]
+
+---
+class: middle, center
+
+## 2. Primacy / Raw data
+
+--
+
+####  Datasets released by the government should be .red[primary source data]
+
+---
+class: middle, center
+
+## 3. Timely data
+
+--
+
+#### Datasets released by the government should be available to the public .red[as soon as possible]
+
+---
+class: middle, center
+
+##  4. Ease of Physical and Electronic Access
+
+--
+
+#### Datasets released by the government should be as accessible as possible, with accessibility defined as .red[the ease with which information can be obtained], whether through physical or electronic means
+
+---
+class: middle, center
+
+## 5. Machine readability
+
+--
+
+####  Machines can handle certain kinds of inputs much better than others. Information shared in the widely-used PDF format, for example, is very difficult for machines to parse
+
+#### Thus, information should be stored in widely-used file formats that easily lend themselves to machine processing.
+
+---
+class: middle, center
+
+## 6. Non-discriminatory access to data
+
+--
+
+#### “Non-discrimination” refers to who can access data and how they must do so
+
+#### Non-discriminatory access to data means that .red[any person can access the data at any time without having to identify him/herself] or provide any justification for doing so.
+
+---
+class: middle, center
+
+## 7. Open standards
+
+--
+
+#### Open standards refer to who owns the format in which data is stored
+
+Do you know a widespread proprietary format ?
+
+--
+
+#### Microsoft .red[Excel] is a fairly commonly-used spreadsheet program which costs money to use. Freely available alternative formats often exist by which stored data can be accessed without the need for a software license
+
+---
+
+## 8. Open Licence 
+
+--
+
+#### Maximal openness includes clearly .red[labeling public information] as a work of the government and .red[available without restrictions on use] as part of the public domain
+
+#### In France two type of licences : .red[Licence Ouverte (CC-BY)] ou .red[ODBL (CC-BY-SA)]. what is the difference ?
+
+**LO (from Etalab) / ODBL** : with both you can share, edit the database, create derived products and had a commercial usage
+
+- **LO** : more "permissive" : you just have to mention the source and the date of update
+
+- **ODBL** : you have to share and open your database at the same conditions
+
+---
+## Open Data : to go further
+
+Find [the 8 principles of Open Government Data](https://public.resource.org/8_principles.html) that were adopted in Sebastopol December 2007
+
+.center[![](img/sunlightfoundation.png)]
+
+Then in 2010 this list was slightly completed and updated ([10 principes](https://sunlightfoundation.com/policy/documents/ten-open-data-principles/)) by the Sunlight Foundation.
+
+In 2013 the Sunlight Foundation wrote instructions and recommandations to implement concretely Open Data (["Open Data guidelines"](http://sunlightf.wpengine.com/wp-content/uploads/2016/09/OpenDataGuidelines_v3.pdf)) based on those 10 principles
+
+---
+class: inverse, center, middle
+
+# Open Government
+
+---
+
+## What does Opengov mean ?
+
+.center[<img src="https://media.giphy.com/media/IbUUbU4xUDJWcgGMGP/giphy.gif" height="400"/>]
+
+---
+
+## A definition of Opengov
+
+> The OECD defines open government as a culture of governance based on innovative and sustainable public policies and practices inspired by the principles of .red[**transparency, accountability and participation**] that **fosters democracy and inclusive growth**
+
+.center[<img src="./img/oecd.png" height="300"/>]
+
+.footnote[[OECD report](https://read.oecd-ilibrary.org/governance/open-government_9789264268104-en#page1)]
+
+---
+
+## A definition of Opengov
+
+
+.center[<img src="./img/gouvouvert.png" height="420"/>]
+
+.footnote[[Source: Démocratie Ouverte](https://fr.wikipedia.org/wiki/Gouvernement_ouvert#/media/Fichier:D%C3%A9mocratie_Ouverte.png)]
+
+
+---
+
+## A definition of Opengov
+
+.red[**Transparency**]
+- *Ouvrir les données* : Open Data
+- *Faire de la pédagogie* : being pedagogical
+- *Permettre le suivi des politiques* : follow-up of public policies
+
+.red[**Participation**]
+- *Consulter les citoyens* : consult the citizens
+- *Organiser des débats publics* : Organize public debate
+- *Co-construire les politiques* : co-plan public policies with citizens
+
+.red[**Collaboration**]
+- *Casser les silos* : break silos between administrations
+- *Travailler en transversalité* : work by being agile
+- *Organiser des partenariats* : organize partnerships with civil society
+
+---
+
+## A definition of Opengov
+
+OpenGov aims at improving the efficiency and the responsibility of public governance. It affects both national and local authorities.
+
+Three key pillars of Opengov:
+
+1/ Transparency / Accountability
+
+2/ Public participation
+
+3/ Collaboration within public administrations
+
+The Opengov movement and ideas really increased in the last 10 years, notably through the support of a transnational actor...
+
+--
+
+The **Open Government Partnership** aka OGP
+
+---
+
+## Open Government Partnership
+
+
+.center[<img src="./img/ogp.png" height="200"/>] 
+
+In September 2011, a multilateral partnership has been created so as to promote the Open Gov principles and to translate them into concrete public policies : it's called **Open Government Partnership** (OGP)
+
+Initially founded by 8 countries ( Brazil, Indonesia, Mexico, Norway, Philippines, United Kingdom, the USA and... **South Africa** !), now OGP is composed of more than 70 countries, including France
+
+---
+## Open Government Partnership
+
+How does OGP work ?
+
+--
+
+To join OGP, a contry has to be coopted by other civil society actors (for instance NGO such as Amnesty International) that testify the goodwill of the government
+
+Once joined, the country has to write, by consulting civil society, a 2-years **national action plan** in which many **commitments** are exposed. Those public commitments have to relate with at least one of the 3 key OGP value : information transparency, public participation, accountability of public action
+
+For instance :
++ Developing a participatory budget representing X % of total budget of a local authority
+
++ Implement an open data strategy that allows to open key datasets 
+
++ Consult citizens in the wake of a new project law
+---
+
+## OGP and local gov
+
+In 2016, OGP OGP launched the “Subnational Government Pilot Program”
+
+> This decision recognized that many open government innovations and reforms are **happening at the local level** where governments can engage more directly with citizens and many crucial public services are delivered
+
+The Pilot program consisted of 15 “pioneer” subnational governments who signed onto the Open Government Subnational Declaration and submitted their first Action Plans.
+
+Then in 2018, OGP supported the launch of a global Community of Practice on Transparency and Local Open Government within the United Cities and Local Governments (UCLG)
+
+> This Community of Practice will support peer learning, networking, and wider awareness and capacity development on open governance and public integrity at the local level. 
+
+---
+
+## OGP and local gov : Paris
+
+.center[<img src="./img/ogpparis.png" height="400" />]
+
+.footnote[[Paris 2016-2017 Action plan](https://www.opengovpartnership.org/members/paris-france/)]
+
+---
+
+## OGP and local gov : Paris
+
+.center[<img src="./img/ogpparis1.png" height="400" />]
+
+
+.footnote[[Paris IRM final report](https://www.opengovpartnership.org/wp-content/uploads/2019/02/Paris_Final-Report_2017.pdf)]
+
+---
+
+class:center, middle, inverse
+## Coffee break : 5 minutes
+
+---
+
+class:inverse, middle, center
+# Open Data platforms
+
+---
+
+class:inverse, middle, center
+## Have you already looked for open data ?
+
+---
+## Data.gouv.fr ?
+
+.red[Data.gouv.fr] is the national platform for French public data.
+It was designed and inaugurated in 2011, by the **Etalab** mission, and then refreshed in 2013.
+.center[<img src="./img/datagouvfr.png" height="250"/>] 
+
+There are thousands of datasets (but not only) coming from different type of public data producers such as Ministries, independent agencies, statistical institutes, local authorities but also third parties producers such as OpenStreetMap or OpenFoodFacts
+
+---
+## Beyond national OD platform
+
+Data.gouv Portal is French **national** Open data platform but it's not the only website that publishes available public datasets. Do you know others ?
+
+--
+
++ There are also OD platforms led by **local authorities** at different levels. For instance, [Paris Data](https://opendata.paris.fr/explore/?sort=modified), [la Région Occitanie](https://data.laregion.fr/pages/accueil/), [l'agglomération de Saint-Malo](https://data.stmalo-agglomeration.fr/page/accueil/)...
+
+--
+
++ Open Data platforms led by **ministries**. Example : [data.education.gouv.fr](https://data.education.gouv.fr/pages/accueil/)
+
+--
+
++ Open Data plaftorms led by **private organizations**. Example [DataNova](https://datanova.laposte.fr/page/accueil/) (La Poste)
+
+--
+
++ Datasets directly published in data provider website, without dedicated platform. Example : Insee
+
+---
+class:inverse, middle, center
+# Challenge 1 : data findability
+
+---
+## Challenge 1 : data findability
+
+> Data findability is a major challenge. We have data portals and registries, but government agencies under one national government still publish data in different ways and different locations.(…)
+**Data findability is a prerequisite for open data to fulfill its potential and currently most data is very hard to find.** 
+
+.center[<img src="https://index.okfn.org/images/Datagapsclean.jpg" height="280" />]
+
+.footnote[https://index.okfn.org/insights/]
+
+---
+
+## Challenge 1 : data findability
+
+According to you, how can we improve data findability ?
+
+--
+
+**It is necessary to document/fill properly the metadata**, that is to say the descriptive data associated to a dataset. For instance :
+
+--
+
++ Data producer
++ Date of first publication
++ Update frequency
++ Date of last update
++ Description of the dataset
++ Variables explanation
++ Topics / tags
++ Time and space coverage (year, area, segmentation)
+
+(*This list is not exhaustive*)
+
+---
+
+## Challenge 1 : data findability
+
+Summer 2017, Datactivist realized a census of all the datasets opened by 15 major French cities (Paris, Lyon, Lille, Nantes...). More than 400 datasets were listed but identifying them was not easy at all...
+
+.center[<img src="./img/recensement3.png" height="350"/>] 
+
+.footnote[[Medium article](https://medium.com/datactivist/qui-a-ouvert-quoi-le-recensement-des-donn%C3%A9es-des-villes-est-maintenant-ouvert-b7f697135c1f)]
+
+---
+
+## Challenge 1 : data findability
+
+Thus,
+> ** Half of the descriptions of data opened by local authorities were written with less than 180 caracters** and only 4% of the datasets had a description abova 1000 caracters
+
+Beyond very short descriptions, another challenge is to **detail the name of the variables**. Often they contain acronyms that make sense for public agents but can't be understood by common citizens.
+
+In the exemple next slide, [l'enquête Etic du Ministère de l'éducation nationale](https://data.education.gouv.fr/explore/dataset/fr-en-etic_1d/table/), many columns have labeled hardly readable such as "SiEquipementInf" ou "Maint_PersEducHEcole" but the data producer made the effort to detail each of them in the metadata
+
+---
+
+## Challenge 1 : data findability
+
+.center[[<img src="./img/etic.png" height="400"/>](https://data.education.gouv.fr/explore/dataset/fr-en-etic_1d/table/)]
+
+---
+
+## Challenge 1 : data findability
+
+.center[<img src="./img/metadonnees.png" height="400"/>]
+
+---
+
+## Challenge 1 : data findability
+
+.center[<img src="https://media.giphy.com/media/l4HodBpDmoMA5p9bG/giphy.gif" height="400"/>]
+
+---
+
+## Challenge 1 : data findability
+
+.center[<img src="./img/googledataset.png" height="350"/>]
+
+Read [Simon Chignard's article](https://donneesouvertes.info/2018/09/17/jai-teste-google-dataset-search-le-moteur-de-recherche-open-data/) on Google Dataset Search
+
+---
+class:inverse, middle, center
+# Challenge 2 : data quality
+
+---
+## Challenge 2 : data quality
+
+
+> **Government data is usually incomplete, out of date, of low quality, and fragmented.** In most cases, open data catalogues or portals are manually fed as the result of informal data management approaches. **Procedures, timelines, and responsibilities are frequently unclear among government institutions tasked with this work.**
+
+OpenDataBarometer ?
+
+> It's a global measure of how governments are publishing and using open data for accountability, innovation and social impact. The Leaders Edition looks at the 30 governments that have adopted the Open Data Charter and those that, as G20 members, have committed to G20 Anti-Corruption Open Data Principles.
+
+.footnote[http://opendatabarometer.org/4thedition/report/]
+
+---
+## Challenge 2 : data quality
+
+![](img/odb.png)
+
+
+---
+## Challenge 2 : data quality
+
+![](img/odb2.png)
+
+.footnote[[OpenDataBarometer 2017 ranking](https://opendatabarometer.org/?_year=2017&indicator=ODB)]
+
+---
+## Challenge 2 : data quality
+
+Sometimes data are well too agregated...
+
+![](img/deception.gif)
+
+---
+## Challenge 2 : data quality
+
+Or hardly exploitable...
+
+.center[<img src="./img/recensement2.png" height="350"/>] 
+
+.footnote[[Source](https://medium.com/datactivist/qui-a-ouvert-quoi-le-recensement-des-donn%C3%A9es-des-villes-est-maintenant-ouvert-b7f697135c1f)]
+
+---
+## Challenge 2 : data quality
+
+Or hardly exploitable...²
+
+.center[<img src="./img/recensement1.png" height="350"/>] 
+
+
+.footnote[[Source](https://medium.com/datactivist/qui-a-ouvert-quoi-le-recensement-des-donn%C3%A9es-des-villes-est-maintenant-ouvert-b7f697135c1f)]
+
+---
+## Challenge 2 : data quality
+
+.center[<img src="./img/openrefine.png" height="400"/>] 
+
+[Download Open Refine (+ tutorials)](http://openrefine.org/)
+
+---
+## Challenge 2 : data quality
+
+.center[<img src="./img/csvgenerator.png" height="400"/>] 
+
+[Have a look to CSV GG (an Etalab initiative)](https://csv-gg.etalab.studio/)
+
+---
+## Tidy data
+
+.center[<img src="./img/hadley.jpg" height="250"/>] 
+
+--
+
+[_Tidy data_ Paradigm](http://vita.had.co.nz/papers/tidy-data.pdf) (Hadley Wickham)
+
+> “All happy families are alike, but every unhappy family is unhappy in its own way” – Leon Tolstoï 
+
+> “Tidy datasets are all alike, but every messy dataset is messy in its own way.” – Hadley Wickham
+
+---
+## Tidy data
+
+[*Tidy data principles*](https://garrettgman.github.io/tidying/) ("données ordonnées")
+- Each variable in the data set is placed in its own column
+- Each observation is placed in its own row
+- Each value is placed in its own cell
+
+.center[<img src="./img/tidydata.png" height="200"/>] 
+
+---
+## See you in two weeks !
+
+So happyyyyy together !
+
+.center[<img src="https://media.giphy.com/media/yoJC2GnSClbPOkV0eA/giphy.gif" height="400"/>]
+
+
+---
+class: inverse, center, middle
+
+# Thank you !
+
+Contact : [timothee.gidoin@sciencespo.fr](mailto:timothee.gidoin@sciencespo.fr)

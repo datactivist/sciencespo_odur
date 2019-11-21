@@ -5,61 +5,67 @@ Master Governing the Large Metropolis
 
 Sciences Po, urban school
 
-Academic Year 2019/2020
+Academic Year 2017/2018
 
 ## Instructors
-
-Samuel Goëta	([Datactivist](datactivist.coop))
-
-Many thanks to François Briatte	(ESPOL, Université Catholique de Lille) and Joël Gombin	(Datactivist) with whom this class was taught for 5 years, in coordination with Antoine Jardin. 
+- François Briatte	(ESPOL, Université Catholique de Lille)
+- Samuel Goëta	(Datactivist)
+- Joël Gombin	(Datactivist)
 
 ## Course Outline
 This workshop offers a critical analysis of how urban-level data are produced, interpreted, and, increasingly, released to the public. It was designed specifically for this Masters, alongside the “Advanced Quantitative Methods” course, which enables students to build on their existing statistical training by mixing qualitative and quantitative insights.
 
-According to the Global[ Open Data Barometer](https://opendatabarometer.org), more than 40 countries across the world have an ambitious open data policy. 22 countries adopted the [international open data charter](https://opendatacharter.net/adopted-by-countries-and-cities/) which sets an objective of open data by default. In France, it is mandatory since October 2018 for all public administrations to open their data. More than 4000  local authorities are covered by this law. For students, especially in urban studies, opportunities in this field are twofold: reusing open datasets has become a prerequirement in quantitative and geospatial studies and new open data project manaagers positions open regularly in public and private entities.
+Students will learn to assess the quality of existing open data resources, critically discuss their political implications, and produce their own catalogue of real-world public datasets.
 
-At the end of the class, students will: 
-- learn the benefits and the principles of open data 
-- know how datasets are concretely opened
-- discover how to conduct an open data project
-- understand the process and best practices to reuse open datasets.
+In order to have a better understanding of the pitfalls of any open data project, we will follow the School of Data pipeline in this class which will allow us to review all the necessary steps in any open data project.  
+![](pipeline.png)
 
+## [Class 1 · Find and get data](http://datactivi.st/sciencespo_odur2017/class1/)
 
-## [Class 1 - Open Data 101 : the origins and principles of a growing movement](http://datactivist.coop/sciencespo_odur/2019/1/)
+Slides: http://datactivi.st/sciencespo_odur2018/class1/
 
-Slides: http://datactivist.coop/sciencespo_odur/2019/1/
+Date: Sept 20th 1PM -4PM
 
-Date: November 21, 2019 (12:30 - 16:45)
-Where?	9, rue de la Chaise 911
+Instructor: Samuel Goëta
 
 Reading:
 - Harlan Yu and David G. Robinson, “The New Ambiguity of ‘Open Government’”[UCLA Law Review 59(178), 2012](https://www.uclalawreview.org/pdf/discourse/59-11.pdf)
 
-## [Class 2 - The Open Data Lifecycle: how open datasets are opened in the backroom of government administrations?](http://datactivist.coop/sciencespo_odur/2019/2/)
+## [Class 2 - Verify data](http://datactivi.st/sciencespo_odur2017/class2/#1)
 
 Slides: http://datactivi.st/sciencespo_odur2018/class2/
 
-Date: November 28, 2019 (08:00 😢 - 12:15)
-Where? 117, bd Saint-Germain 721
+Date: Oct 4th 1PM-4PM
+
+Instructor: Samuel Goëta 
 
 Reading: 
-- Jérôme Denis, Samuel Goëta. [Rawification and the careful generation of open government data. Social Studies of Science](https://halshs.archives-ouvertes.fr/halshs-01617976/document), SAGE Publications, 2017, 47 (5), pp.604 - 629. 
+- David Ribes and Steven J. Jackson, “[Data Bite Man: The Work of Sustaining a Long-Term Study,](http://static1.1.sqspcdn.com/static/f/1070098/22175786/1363200724880/RibesJackson+-+Data+Bite+Man.pdf?token=QWR6lTGBtPNmiLqToDZCUWJkR3w%3D)” in Lisa Gitelman (ed.), ‘Raw Data’ is an Oxymoron, MIT Press, 2013, pp. 147–66.
 
-
-## [Class 3 - The Data Pipeline: the pitfalls of reusing open datasets](http://datactivist.coop/sciencespo_odur/2019/3/)
-Date: December 4th,  4PM-7PM
-Where: 	117, bd Saint-Germain 740
-
+## [Class 3 - Clean Data](http://datactivi.st/sciencespo_odur2017/class3/#1)
+Date: Oct 25th 4PM-7PM
 Slides: http://datactivi.st/sciencespo_odur2018/class3/#1
 
 Instructor: Joël Gombin 
 
 Readings:
+- Garrett Grolemund and Hadley Wickham, “Tidy Data”[In R for Data Science, 2017, ch. 12](http://r4ds.had.co.nz/tidy-data.html)
+- OKFN, "[Open data quality – the next shift in open data?](https://blog.okfn.org/2017/05/31/open-data-quality-the-next-shift-in-open-data/)"
+
+## [Class 4 - Present data](https://frama.link/odur-2017-s4)
+Nov 23rd, 4pm-7pm
+
+Instructor: [Francois Briatte](https://f.briatte.org/)
+
+- [Slides](https://frama.link/odur-2017-s4)
+- [Replication material](class4)
+
+Readings:
+
+- Wendy N. Espeland and Mitchell L. Stevens, “A Sociology of Quantification”  
+  [_European Journal of Sociology_ 49(3): 401–36, 2009](https://www.researchgate.net/publication/231852216_A_Sociology_of_Quantification)
 - Kieran Healy and James Moody, “Data Visualization in Sociology”  
   [_Annual Review of Sociology_ 40:105–28, 2014](https://kieranhealy.org/files/papers/data-visualization.pdf)
-  
-  
-## References
 
 Books:
 

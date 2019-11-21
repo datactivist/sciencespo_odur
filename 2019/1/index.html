@@ -207,14 +207,14 @@ Data may be :
 ---
 ## Data are cool !
 
-.center[&lt;img src="./img/tricot.png" height="450"/&gt;]
+.center[&lt;img src="https://gidoin.github.io/sciencespodata/img/tricot.png" height="450"/&gt;]
 
 .footnote[[Source](https://twitter.com/montgomerysue/status/1128093628738482177)]
 
 ---
 ## Data are cool !
 
-.center[&lt;img src="./img/violenceandimmigration.png" height="400"/&gt;]
+.center[&lt;img src="https://gidoin.github.io/sciencespodata/img/violenceandimmigration.png" height="400"/&gt;]
 
 .footnote[[Source](https://www.themarshallproject.org/2018/03/30/the-myth-of-the-criminal-immigrant)]
 
@@ -222,12 +222,12 @@ Data may be :
 Class:
 ## Data are cool !
 
-.pull-left[&lt;img src="./img/ainbnb1.png" height="250"/&gt;
+.pull-left[&lt;img src="https://gidoin.github.io/sciencespodata/img/ainbnb1.png" height="250"/&gt;
 
 Number of Airbnb appartments available in Paris
 ]
 
-.pull-right[&lt;img src="./img/airbnb2.png" height="250"/&gt;
+.pull-right[&lt;img src="https://gidoin.github.io/sciencespodata/img/airbnb2.png" height="250"/&gt;
 
 Average price of Airbnb appartments in Paris
 ]
@@ -235,25 +235,47 @@ Average price of Airbnb appartments in Paris
 .footnote[[Source](https://www.sites.univ-rennes2.fr/mastersigat/B_Mericskay/WebGL.html)]
 
 ---
-## Data are cool !
-
-&lt;iframe style="width: 80vw; height: 50vh; border: none;" src="https://query.wikidata.org/embed.html#%23defaultView%3AImageGrid%0ASELECT%20%3Fcocktail%20%3FcocktailLabel%20(SAMPLE(%3Frecipe)%20AS%20%3Frecipe)%20(SAMPLE(%3Fimage)%20AS%20%3Fimage)%0AWHERE%0A%7B%0A%20%20%7B%0A%20%20%20%20SELECT%20%3Fcocktail%20%3FcocktailLabel%20(GROUP_CONCAT(DISTINCT%20%3Fingredient%3B%20separator%3D%22%2C%20%22)%20AS%20%3FingredientsList)%20(GROUP_CONCAT(DISTINCT%20%3FgarnishLabel%3B%20separator%3D%22%2C%20%22)%20AS%20%3FgarnishList)%20(COUNT(DISTINCT%20%3Fingredient)%20%2B%20COUNT(DISTINCT%20%3FgarnishLabel)%20AS%20%3Fcount)%0A%20%20%20%20WHERE%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%3Fcocktail%20wdt%3AP31%2Fwdt%3AP279*%20wd%3AQ134768%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20p%3AP186%20%3FmaterialStat.%0A%20%20%20%20%20%20MINUS%20%7B%20%3FmaterialStat%20pq%3AP518%2Fwdt%3AP279*%20wd%3AQ2453629.%20%7D%0A%20%20%20%20%20%20MINUS%20%7B%20%3FmaterialStat%20ps%3AP186%20wd%3AQ488463%3B%20pq%3AP366%20wd%3AQ26876981.%20%7D%0A%20%20%20%20%20%20MINUS%20%7B%20%3FmaterialStat%20pq%3AP366%20wd%3AQ59541.%20%7D%0A%20%20%20%20%20%20%3FmaterialStat%20ps%3AP186%2Frdfs%3Alabel%20%3FmaterialLabel.%0A%20%20%20%20%20%20FILTER(LANG(%3FmaterialLabel)%20%3D%20%22en%22).%0A%20%20%20%20%20%20BIND(%3FmaterialLabel%20AS%20%3FingredientSolo).%0A%20%20%20%20%20%20OPTIONAL%20%7B%0A%20%20%20%20%20%20%20%20%3FmaterialStat%20ps%3AP186%2Frdfs%3Alabel%20%3FmaterialLabel%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20pq%3AP1114%20%3Fquantity.%0A%20%20%20%20%20%20%20%20FILTER(LANG(%3FmaterialLabel)%20%3D%20%22en%22).%0A%20%20%20%20%20%20%20%20BIND(CONCAT(STR(%3Fquantity)%2C%20%22%20%22%2C%20%3FmaterialLabel)%20AS%20%3FingredientWithQuantity).%0A%20%20%20%20%20%20%20%20OPTIONAL%20%7B%0A%20%20%20%20%20%20%20%20%20%20%3FmaterialStat%20pq%3AP1114%20%3Fquantity%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20ps%3AP186%2Frdfs%3Alabel%20%3FmaterialLabel%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20pqv%3AP1114%2Fwikibase%3AquantityUnit%20%3Funit.%0A%20%20%20%20%20%20%20%20%20%20FILTER(LANG(%3FmaterialLabel)%20%3D%20%22en%22).%0A%20%20%20%20%20%20%20%20%20%20FILTER(%3Funit%20!%3D%20wd%3AQ199).%0A%20%20%20%20%20%20%20%20%20%20%3Funit%20rdfs%3Alabel%20%3FunitLabel.%0A%20%20%20%20%20%20%20%20%20%20FILTER(LANG(%3FunitLabel)%20%3D%20%22en%22).%0A%20%20%20%20%20%20%20%20%20%20BIND(CONCAT(STR(%3Fquantity)%2C%20%22%20%22%2C%20IF(%3Fquantity%20%3D%201%2C%20%3FunitLabel%2C%20CONCAT(%3FunitLabel%2C%20IF(STRENDS(%3FunitLabel%2C%20%22sh%22)%2C%20%22es%22%2C%20%22s%22)))%2C%20%22%20%22%2C%20%3FmaterialLabel)%20AS%20%3FingredientWithUnit).%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20BIND(COALESCE(%3FingredientWithUnit%2C%20%3FingredientWithQuantity%2C%20%3FingredientSolo)%20AS%20%3Fingredient).%0A%20%20%20%20%20%20OPTIONAL%20%7B%0A%20%20%20%20%20%20%20%20%3Fcocktail%20p%3AP186%20%5B%20ps%3AP186%20%3Fgarnish%3B%20pq%3AP366%20wd%3AQ59541%20%5D.%0A%20%20%20%20%20%20%20%20%3Fgarnish%20rdfs%3Alabel%20%3FgarnishLabel.%0A%20%20%20%20%20%20%20%20FILTER(LANG(%3FgarnishLabel)%20%3D%20%22en%22).%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%3Fcocktail%20rdfs%3Alabel%20%3FcocktailLabel.%0A%20%20%20%20%20%20FILTER(LANG(%3FcocktailLabel)%20%3D%20%22en%22).%0A%20%20%20%20%7D%0A%20%20%20%20GROUP%20BY%20%3Fcocktail%20%3FcocktailLabel%0A%20%20%7D%0A%20%20BIND(%0A%20%20%20%20IF(REGEX(%3FingredientsList%2C%20%22%2C%20.*%2C%22)%2C%0A%20%20%20%20%20%20%20REPLACE(%3FingredientsList%2C%20%22(.*)%2C%20(.*)%22%2C%20%22%241%2C%20and%20%242%22)%2C%0A%20%20%20%20%20%20%20REPLACE(%3FingredientsList%2C%20%22(.*)%2C%20(.*)%22%2C%20%22%241%20and%20%242%22))%0A%20%20%20%20AS%20%3Fingredients).%0A%20%20BIND(%0A%20%20%20%20IF(REGEX(%3FgarnishList%2C%20%22%2C%20.*%2C%22)%2C%0A%20%20%20%20%20%20%20REPLACE(%3FgarnishList%2C%20%22(.*)%2C%20(.*)%22%2C%20%22%241%2C%20and%20%242%22)%2C%0A%20%20%20%20%20%20%20REPLACE(%3FgarnishList%2C%20%22(.*)%2C%20(.*)%22%2C%20%22%241%20and%20%242%22))%0A%20%20%20%20AS%20%3Fgarnishes).%0A%20%20OPTIONAL%20%7B%0A%20%20%20%20%3Fcocktail%20p%3AP186%20%5B%20ps%3AP186%20%3Fglass%3B%20pq%3AP518%2Fwdt%3AP279*%20wd%3AQ2453629%20%5D.%0A%20%20%20%20%3Fglass%20rdfs%3Alabel%20%3FglassLabel.%0A%20%20%20%20FILTER(LANG(%3FglassLabel)%20%3D%20%22en%22).%0A%20%20%20%20BIND(IF(REGEX(%3FglassLabel%2C%20%22%5E%5BAEIOUaeiou%5D%22)%2C%20%22an%22%2C%20%22a%22)%20AS%20%3Farticle).%0A%20%20%20%20BIND(CONCAT(%22%20in%20%22%2C%20%3Farticle%2C%20%22%20%22%2C%20%3FglassLabel)%20AS%20%3Fcontainer).%0A%20%20%20%20BIND(%22%2C%20served%22%20AS%20%3Fserved).%0A%20%20%7D%0A%20%20OPTIONAL%20%7B%0A%20%20%20%20%3Fcocktail%20p%3AP186%20%5B%20ps%3AP186%20wd%3AQ488463%3B%20pq%3AP366%20wd%3AQ26876981%20%5D.%0A%20%20%20%20BIND(%22%20on%20the%20rocks%22%20AS%20%3FonTheRocks).%0A%20%20%20%20BIND(%22%2C%20served%22%20AS%20%3Fserved).%0A%20%20%7D%0A%20%20OPTIONAL%20%7B%0A%20%20%20%20FILTER(STRLEN(STR(%3Fgarnishes))%20%3E%201).%0A%20%20%20%20BIND(CONCAT(%22%20with%20%22%2C%20%3Fgarnishes)%20AS%20%3Fgarnish).%0A%20%20%20%20BIND(%22%2C%20served%22%20AS%20%3Fserved).%0A%20%20%7D%0A%20%20BIND(CONCAT(%0A%20%20%20%20%3Fingredients%2C%0A%20%20%20%20COALESCE(%3Fserved%2C%20%22%22)%2C%0A%20%20%20%20COALESCE(%3FonTheRocks%2C%20%22%22)%2C%0A%20%20%20%20COALESCE(%3Fgarnish%2C%20%22%22)%2C%0A%20%20%20%20COALESCE(%3Fcontainer%2C%20%22%22))%0A%20%20%20%20AS%20%3Frecipe).%0A%20%20OPTIONAL%20%7B%20%3Fcocktail%20wdt%3AP18%20%3Fimage.%20%7D%0A%7D%0AGROUP%20BY%20%3Fcocktail%20%3FcocktailLabel%0AORDER%20BY%20DESC(MAX(%3Fcount))" referrerpolicy="origin" sandbox="allow-scripts allow-same-origin allow-popups"&gt;&lt;/iframe&gt;
-
-
----
 class: inverse, center, middle
 
-# Open data
+# The origins of open data
 
 ---
-## A talk to start..
+### [.red[The multiple facets of open data :]](https://books.openedition.org/cdf/5005?lang=fr) la transparence
 
-.center[&lt;img src="./img/rawdatanow.png" height="400" /&gt;]
+Strenghten (_accountability_) and reduce information asymetries
 
-[Start the Ted talk at 09:00](https://www.ted.com/talks/tim_berners_lee_on_the_next_web#t-535280)
+.reduite[
+![](https://datactivist.coop/aaf/img/ddhc.png)
+]
+---
+### [.red[The multiple facets of open data: :]](https://books.openedition.org/cdf/5005?lang=fr) freedom of information
+
+In the linkage of cybernetics and free software movements
+
+.reduite.center[![](https://farm7.static.flickr.com/6197/6073305958_19c2bbef40_o.jpg)]
 
 ---
-## Open data : definition
+
+###  [.red[The multiple facets of open data: :]](https://books.openedition.org/cdf/5005?lang=fr) data-driven science
+
+.reduite.center[![](http://images.wisegeek.com/physical-data.jpg)]
+
+---
+
+### [.red[The multiple facets of open data:]](https://books.openedition.org/cdf/5005?lang=fr) data industry
+"Data is the new (s)oil"
+
+.reduite[.center[![](https://images.pexels.com/photos/70362/oil-monahans-texas-sunset-70362.jpeg?cs=srgb&amp;dl=dawn-drill-evening-70362.jpg&amp;fm=jpg)]]
+
+---
+
+### [.red[The multiple facets of open data:]](https://books.openedition.org/cdf/5005?lang=fr) transform government
+
+
+.reduite[.center[![](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/D%C3%A9mocratie_Ouverte.png/800px-D%C3%A9mocratie_Ouverte.png]]
+
+---
+### Open data : definition
 
 According to Wikipedia, open data is :
 &gt; Open data is the idea that some data should be freely available to everyone to use and republish as they wish. One of the most important forms of open data is open government data (OGD), which is a form of open data created by ruling institutions.
@@ -270,7 +292,7 @@ French law considers that data produced/owned by public administrations/local au
 
 ---
 class: 
-## Why should Gov open data ?
+### Why should Gov open data ?
 
 .center[&lt;img src="https://media.giphy.com/media/vzvFGQs0P013i/giphy.gif" height="250" /&gt;]
 
@@ -285,13 +307,13 @@ class:
 - **Economic opportunities**
 
 ---
-## Open data : key milestones
+### Open data : key milestones
 
-![](img/chrono.png)
+![](https://gidoin.github.io/sciencespodata/img/chrono.png)
 
 ---
 
-## 7th December 2007 : Sebastopol meeting 
+### 7th December 2007 : Sebastopol meeting 
 
 .pull-left[
 👥 **What ?** : A meeting of the Open Government Group in Sebastopol (California), headquarters of O'Reilly editions
@@ -302,13 +324,13 @@ class:
 
 ]
 .pull-right[
-![](img/photofamille.jpg)
+![](https://gidoin.github.io/sciencespodata/img/photofamille.jpg)
 ]
 
 ---
 class: middle, center
 
-## 1. Completeness
+### 1. Completeness
 
 --
 
@@ -319,7 +341,7 @@ class: middle, center
 ---
 class: middle, center
 
-## 2. Primacy / Raw data
+### 2. Primacy / Raw data
 
 --
 
@@ -328,7 +350,7 @@ class: middle, center
 ---
 class: middle, center
 
-## 3. Timely data
+### 3. Timely data
 
 --
 
@@ -337,7 +359,7 @@ class: middle, center
 ---
 class: middle, center
 
-##  4. Ease of Physical and Electronic Access
+###  4. Ease of Physical and Electronic Access
 
 --
 
@@ -346,7 +368,7 @@ class: middle, center
 ---
 class: middle, center
 
-## 5. Machine readability
+### 5. Machine readability
 
 --
 
@@ -357,7 +379,7 @@ class: middle, center
 ---
 class: middle, center
 
-## 6. Non-discriminatory access to data
+### 6. Non-discriminatory access to data
 
 --
 
@@ -368,7 +390,7 @@ class: middle, center
 ---
 class: middle, center
 
-## 7. Open standards
+### 7. Open standards
 
 --
 
@@ -382,7 +404,7 @@ Do you know a widespread proprietary format ?
 
 ---
 
-## 8. Open Licence 
+### 8. Open Licence 
 
 --
 
@@ -397,7 +419,7 @@ Do you know a widespread proprietary format ?
 - **ODBL** : you have to share and open your database at the same conditions
 
 ---
-## Open Data : to go further
+### Open Data : to go further
 
 Find [the 8 principles of Open Government Data](https://public.resource.org/8_principles.html) that were adopted in Sebastopol December 2007
 
@@ -414,33 +436,33 @@ class: inverse, center, middle
 
 ---
 
-## What does Opengov mean ?
+### What does Opengov mean ?
 
 .center[&lt;img src="https://media.giphy.com/media/IbUUbU4xUDJWcgGMGP/giphy.gif" height="400"/&gt;]
 
 ---
 
-## A definition of Opengov
+### A definition of Opengov
 
 &gt; The OECD defines open government as a culture of governance based on innovative and sustainable public policies and practices inspired by the principles of .red[**transparency, accountability and participation**] that **fosters democracy and inclusive growth**
 
-.center[&lt;img src="./img/oecd.png" height="300"/&gt;]
+.center[&lt;img src="https://gidoin.github.io/sciencespodata/img/oecd.png" height="300"/&gt;]
 
 .footnote[[OECD report](https://read.oecd-ilibrary.org/governance/open-government_9789264268104-en#page1)]
 
 ---
 
-## A definition of Opengov
+### A definition of Opengov
 
 
-.center[&lt;img src="./img/gouvouvert.png" height="420"/&gt;]
+.center[&lt;img src="https://gidoin.github.io/sciencespodata/img/gouvouvert.png" height="420"/&gt;]
 
 .footnote[[Source: Démocratie Ouverte](https://fr.wikipedia.org/wiki/Gouvernement_ouvert#/media/Fichier:D%C3%A9mocratie_Ouverte.png)]
 
 
 ---
 
-## A definition of Opengov
+### A definition of Opengov
 
 .red[**Transparency**]
 - *Ouvrir les données* : Open Data
@@ -459,7 +481,7 @@ class: inverse, center, middle
 
 ---
 
-## A definition of Opengov
+### A definition of Opengov
 
 OpenGov aims at improving the efficiency and the responsibility of public governance. It affects both national and local authorities.
 
@@ -479,10 +501,10 @@ The **Open Government Partnership** aka OGP
 
 ---
 
-## Open Government Partnership
+### Open Government Partnership
 
 
-.center[&lt;img src="./img/ogp.png" height="200"/&gt;] 
+.center[&lt;img src="https://gidoin.github.io/sciencespodata/img/ogp.png" height="200"/&gt;] 
 
 In September 2011, a multilateral partnership has been created so as to promote the Open Gov principles and to translate them into concrete public policies : it's called **Open Government Partnership** (OGP)
 
@@ -507,7 +529,7 @@ For instance :
 + Consult citizens in the wake of a new project law
 ---
 
-## OGP and local gov
+## OG#P and local gov
 
 In 2016, OGP OGP launched the “Subnational Government Pilot Program”
 
@@ -519,31 +541,9 @@ Then in 2018, OGP supported the launch of a global Community of Practice on Tran
 
 &gt; This Community of Practice will support peer learning, networking, and wider awareness and capacity development on open governance and public integrity at the local level. 
 
----
+---#
 
-## OGP and local gov : Paris
-
-.center[&lt;img src="./img/ogpparis.png" height="400" /&gt;]
-
-.footnote[[Paris 2016-2017 Action plan](https://www.opengovpartnership.org/members/paris-france/)]
-
----
-
-## OGP and local gov : Paris
-
-.center[&lt;img src="./img/ogpparis1.png" height="400" /&gt;]
-
-
-.footnote[[Paris IRM final report](https://www.opengovpartnership.org/wp-content/uploads/2019/02/Paris_Final-Report_2017.pdf)]
-
----
-
-class:center, middle, inverse
-## Coffee break : 5 minutes
-
----
-
-class:inverse, middle, center
+class:cenerse, middle, center
 # Open Data platforms
 
 ---
@@ -556,7 +556,7 @@ class:inverse, middle, center
 
 .red[Data.gouv.fr] is the national platform for French public data.
 It was designed and inaugurated in 2011, by the **Etalab** mission, and then refreshed in 2013.
-.center[&lt;img src="./img/datagouvfr.png" height="250"/&gt;] 
+.center[&lt;img src="./ihttps://gidoin.github.io/sciencespodata//datagouvfr.png" height="250"/&gt;] 
 
 There are thousands of datasets (but not only) coming from different type of public data producers such as Ministries, independent agencies, statistical institutes, local authorities but also third parties producers such as OpenStreetMap or OpenFoodFacts
 
@@ -624,7 +624,9 @@ According to you, how can we improve data findability ?
 
 Summer 2017, Datactivist realized a census of all the datasets opened by 15 major French cities (Paris, Lyon, Lille, Nantes...). More than 400 datasets were listed but identifying them was not easy at all...
 
-.center[&lt;img src="./img/recensement3.png" height="350"/&gt;] 
+.center[&lt;im
+g src="./ihttps://datactivist.coop/ubordeaux//recensement3.pg" height="350"/&gt;] 
+
 
 .footnote[[Medium article](https://medium.com/datactivist/qui-a-ouvert-quoi-le-recensement-des-donn%C3%A9es-des-villes-est-maintenant-ouvert-b7f697135c1f)]
 
@@ -641,15 +643,15 @@ In the exemple next slide, [l'enquête Etic du Ministère de l'éducation nation
 
 ---
 
-## Challenge 1 : data findability
+## Ch#allenge 1 : data findability
 
-.center[[&lt;img src="./img/etic.png" height="400"/&gt;](https://data.education.gouv.fr/explore/dataset/fr-en-etic_1d/table/)]
+.center[[&lt;img src="./ihttps://gidoin.github.io/sciencespodata//etic.png" height="400"/&gt;](https://data.education.gouv.fr/explore/dataset/fr-en-etic_1d/table/)]
 
 ---
 
-## Challenge 1 : data findability
+## Ch#allenge 1 : data findability
 
-.center[&lt;img src="./img/metadonnees.png" height="400"/&gt;]
+.center[&lt;img src="./ihttps://gidoin.github.io/sciencespodata//metadonnees.png" height="400"/&gt;]
 
 ---
 

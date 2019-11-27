@@ -90,7 +90,7 @@ Date: November 28, 2019 (08:00 - 12:15)
 Where? 117, bd Saint-Germain 721
 
 #### Class 3 - The Data Pipeline: the pitfalls of reusing open datasets
-Date: December 4th,  4PM-7PM
+Date: December 4th,  10AM
 Where: 117, bd Saint-Germain 740
 
 ---
@@ -119,7 +119,7 @@ Where: 117, bd Saint-Germain 740
   - Short questions to ensure you understood course materials
   - To be submitted 48 hours after sent 
 
-- **Final Exam** : 
+- **Final Exam** : .red[**DEADLINE DEC 22**]
   - **50% of your total grade**: a 2-pages (graph/map included) note, **.red[1]** page of annex **MAX** allowed, for your Head of cabinet with the main result you got by analysing this data
     - Find an interesting dataset opened by govt or local authorities or public companies related to urban matter.
     - Analyze the data, cross the data to strenghten your analysis, transform the data to produce a graph or a map displaying the key results
@@ -513,7 +513,7 @@ In September 2011, a multilateral partnership has been created so as to promote 
 Initially founded by 8 countries ( Brazil, Indonesia, Mexico, Norway, Philippines, United Kingdom, the USA and... **South Africa** !), now OGP is composed of more than 70 countries, including France
 
 ---
-## Open Government Partnership
+### Open Government Partnership
 
 How does OGP work ?
 
@@ -531,7 +531,7 @@ For instance :
 + Consult citizens in the wake of a new project law
 ---
 
-## OG#P and local gov
+### OGP and local gov
 
 In 2016, OGP OGP launched the “Subnational Government Pilot Program”
 
@@ -554,7 +554,7 @@ class:inverse, middle, center
 ## Have you already looked for open data ?
 
 ---
-## Data.gouv.fr ?
+### Data.gouv.fr ?
 
 .red[Data.gouv.fr] is the national platform for French public data.
 It was designed and inaugurated in 2011, by the **Etalab** mission, and then refreshed in 2013.
@@ -563,7 +563,7 @@ It was designed and inaugurated in 2011, by the **Etalab** mission, and then ref
 There are thousands of datasets (but not only) coming from different type of public data producers such as Ministries, independent agencies, statistical institutes, local authorities but also third parties producers such as OpenStreetMap or OpenFoodFacts
 
 ---
-## Beyond national OD platform
+### Beyond national OD platform
 
 Data.gouv Portal is French **national** Open data platform but it's not the only website that publishes available public datasets. Do you know others ?
 
@@ -588,7 +588,7 @@ class:inverse, middle, center
 # Challenge 1 : data findability
 
 ---
-## Challenge 1 : data findability
+### Challenge 1 : data findability
 
 > Data findability is a major challenge. We have data portals and registries, but government agencies under one national government still publish data in different ways and different locations.(…)
 **Data findability is a prerequisite for open data to fulfill its potential and currently most data is very hard to find.** 
@@ -599,7 +599,7 @@ class:inverse, middle, center
 
 ---
 
-## Challenge 1 : data findability
+### Challenge 1 : data findability
 
 According to you, how can we improve data findability ?
 
@@ -622,7 +622,7 @@ According to you, how can we improve data findability ?
 
 ---
 
-## Challenge 1 : data findability
+### Challenge 1 : data findability
 
 Summer 2017, Datactivist realized a census of all the datasets opened by 15 major French cities (Paris, Lyon, Lille, Nantes...). More than 400 datasets were listed but identifying them was not easy at all...
 
@@ -634,7 +634,7 @@ g src="./ihttps://datactivist.coop/ubordeaux//recensement3.pg" height="350"/>]
 
 ---
 
-## Challenge 1 : data findability
+### Challenge 1 : data findability
 
 Thus,
 > ** Half of the descriptions of data opened by local authorities were written with less than 180 caracters** and only 4% of the datasets had a description abova 1000 caracters
@@ -645,27 +645,27 @@ In the exemple next slide, [l'enquête Etic du Ministère de l'éducation nation
 
 ---
 
-## Ch#allenge 1 : data findability
+### Challenge 1 : data findability
 
-.center[[<img src="./ihttps://gidoin.github.io/sciencespodata//etic.png" height="400"/>](https://data.education.gouv.fr/explore/dataset/fr-en-etic_1d/table/)]
-
----
-
-## Ch#allenge 1 : data findability
-
-.center[<img src="./ihttps://gidoin.github.io/sciencespodata//metadonnees.png" height="400"/>]
+.center[[<img src="https://gidoin.github.io/sciencespodata/etic.png" height="400"/>](https://data.education.gouv.fr/explore/dataset/fr-en-etic_1d/table/)]
 
 ---
 
-## Challenge 1 : data findability
+### Challenge 1 : data findability
+
+.center[<img src="https://gidoin.github.io/sciencespodata/metadonnees.png" height="400"/>]
+
+---
+
+### Challenge 1 : data findability
 
 .center[<img src="https://media.giphy.com/media/l4HodBpDmoMA5p9bG/giphy.gif" height="400"/>]
 
 ---
 
-## Challenge 1 : data findability
+### Challenge 1 : data findability
 
-.center[<img src="./img/googledataset.png" height="350"/>]
+.center[<img src="https://gidoin.github.io/sciencespodata/img/googledataset.png" height="350"/>]
 
 Read [Simon Chignard's article](https://donneesouvertes.info/2018/09/17/jai-teste-google-dataset-search-le-moteur-de-recherche-open-data/) on Google Dataset Search
 
@@ -674,7 +674,7 @@ class:inverse, middle, center
 # Challenge 2 : data quality
 
 ---
-## Challenge 2 : data quality
+### Challenge 2 : data quality
 
 
 > **Government data is usually incomplete, out of date, of low quality, and fragmented.** In most cases, open data catalogues or portals are manually fed as the result of informal data management approaches. **Procedures, timelines, and responsibilities are frequently unclear among government institutions tasked with this work.**
@@ -686,62 +686,62 @@ OpenDataBarometer ?
 .footnote[http://opendatabarometer.org/4thedition/report/]
 
 ---
-## Challenge 2 : data quality
+### Challenge 2 : data quality
 
-![](img/odb.png)
+![](https://gidoin.github.io/sciencespodata/img/odb.png)
 
 
 ---
-## Challenge 2 : data quality
+### Challenge 2 : data quality
 
-![](img/odb2.png)
+![](https://gidoin.github.io/sciencespodata/img/odb2.png)
 
 .footnote[[OpenDataBarometer 2017 ranking](https://opendatabarometer.org/?_year=2017&indicator=ODB)]
 
 ---
-## Challenge 2 : data quality
+### Challenge 2 : data quality
 
 Sometimes data are well too agregated...
 
-![](img/deception.gif)
+![](https://gidoin.github.io/sciencespodata/img/deception.gif)
 
 ---
-## Challenge 2 : data quality
+### Challenge 2 : data quality
 
 Or hardly exploitable...
 
-.center[<img src="./img/recensement2.png" height="350"/>] 
+.center[<img src="https://gidoin.github.io/sciencespodata/img/recensement2.png" height="350"/>] 
 
 .footnote[[Source](https://medium.com/datactivist/qui-a-ouvert-quoi-le-recensement-des-donn%C3%A9es-des-villes-est-maintenant-ouvert-b7f697135c1f)]
 
 ---
-## Challenge 2 : data quality
+### Challenge 2 : data quality
 
 Or hardly exploitable...²
 
-.center[<img src="./img/recensement1.png" height="350"/>] 
+.center[<img src="https://gidoin.github.io/sciencespodata/img/recensement1.png" height="350"/>] 
 
 
 .footnote[[Source](https://medium.com/datactivist/qui-a-ouvert-quoi-le-recensement-des-donn%C3%A9es-des-villes-est-maintenant-ouvert-b7f697135c1f)]
 
 ---
-## Challenge 2 : data quality
+### Challenge 2 : data quality
 
-.center[<img src="./img/openrefine.png" height="400"/>] 
+.center[<img src="https://gidoin.github.io/sciencespodata/img/openrefine.png" height="400"/>] 
 
 [Download Open Refine (+ tutorials)](http://openrefine.org/)
 
 ---
-## Challenge 2 : data quality
+### Challenge 2 : data quality
 
-.center[<img src="./img/csvgenerator.png" height="400"/>] 
+.center[<img src="https://gidoin.github.io/sciencespodata/img/csvgenerator.png" height="400"/>] 
 
 [Have a look to CSV GG (an Etalab initiative)](https://csv-gg.etalab.studio/)
 
 ---
-## Tidy data
+### Tidy data
 
-.center[<img src="./img/hadley.jpg" height="250"/>] 
+.center[<img src="https://gidoin.github.io/sciencespodata/img/hadley.jpg" height="250"/>] 
 
 --
 
@@ -752,7 +752,7 @@ Or hardly exploitable...²
 > “Tidy datasets are all alike, but every messy dataset is messy in its own way.” – Hadley Wickham
 
 ---
-## Tidy data
+### Tidy data
 
 [*Tidy data principles*](https://garrettgman.github.io/tidying/) ("données ordonnées")
 - Each variable in the data set is placed in its own column
@@ -762,7 +762,7 @@ Or hardly exploitable...²
 .center[<img src="./img/tidydata.png" height="200"/>] 
 
 ---
-## See you in two weeks !
+### See you next week!
 
 So happyyyyy together !
 

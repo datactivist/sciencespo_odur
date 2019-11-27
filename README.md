@@ -45,25 +45,11 @@ Where? 117, bd Saint-Germain 721
 Reading: 
 - Jérôme Denis, Samuel Goëta. [Rawification and the careful generation of open government data. Social Studies of Science](https://halshs.archives-ouvertes.fr/halshs-01617976/document), SAGE Publications, 2017, 47 (5), pp.604 - 629. 
 
-<<<<<<< HEAD
-
-## [Class 3 - The Data Pipeline: the pitfalls of reusing open datasets](http://datactivist.coop/sciencespo_odur/2019/3/)
-Date: December 4th,  4PM-7PM
-Slides: http://datactivi.st/sciencespo_odur2018/class3/#1
-=======
->>>>>>> 20b4aa3622ae32943fe7375e9345d49d2127abfa
 
 ## [Class 3 - The Data Pipeline: the pitfalls of reusing open datasets](http://datactivist.coop/sciencespo_odur/2019/3/)
 Date: December 4th,  4PM-7PM
 Where: 	117, bd Saint-Germain 740
 
-<<<<<<< HEAD
-=======
-Slides: http://datactivi.st/sciencespo_odur2018/class3/#1
-
-Instructor: Joël Gombin 
-
->>>>>>> 20b4aa3622ae32943fe7375e9345d49d2127abfa
 Readings:
 - Kieran Healy and James Moody, “Data Visualization in Sociology”  
   [_Annual Review of Sociology_ 40:105–28, 2014](https://kieranhealy.org/files/papers/data-visualization.pdf)

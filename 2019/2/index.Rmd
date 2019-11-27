@@ -1,6 +1,6 @@
 ---
 title: "The Open Data Lifecycle"
-subtitle: "How open datasets are opened in the backroom of government administrations?"
+subtitle: "How datasets are opened in the backroom of government administrations?"
 author: "Samuel Goëta, Datactivist"
 date: "`r Sys.Date()`"
 output:
@@ -308,7 +308,5 @@ class: inverse, center, middle
 ### See you next week!
 
 .center[<img src="https://media.giphy.com/media/L2dgNOcnbj2QE/giphy.gif" height="400"/>]
-
-
 
 Contact : [samuel@datactivist.coop](mailto:samuel@datactivist.coop)

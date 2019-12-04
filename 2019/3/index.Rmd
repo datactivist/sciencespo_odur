@@ -131,7 +131,7 @@ Google has been offering this[search engine](https://toolbox.google.com/datasets
 [![](./img/datasetsearch.png)](https://toolbox.google.com/datasetsearch)
 
 ---
-#### Search the[OpenDataSoft data network](data.opendatasoft.com)
+### Search the[OpenDataSoft data network](data.opendatasoft.com)
 
 OpenDataSoft references all data sets published on all its portals. Among them, the Public portal refers to data sets that cannot be found elsewhere, such as the[location of radars] (https://data.opendatasoft.com/explore/dataset/radars%40public/table/). 
 ![](./img/dataods.png)
@@ -143,9 +143,9 @@ The"[Map Features] (https://wiki.openstreetmap.org/wiki/Map_Features)" page on t
 .footnote[More info: https://datactivist.coop/atelier-osm/]
 
 ---
-#### Use[data curation resources] (https://teamopendata.org/t/curation-de-donnees-data-is-plural/734)
+### Use[data curation resources](https://teamopendata.org/t/curation-de-donnees-data-is-plural/734)
 
-I have listed on[TeamOpenData] (https://teamopendata.org/t/curation-de-donnees-data-is-plural/734) the best data curation resources. A search will help you find international data that you would not otherwise find. 
+I have listed on[TeamOpenData](https://teamopendata.org/t/curation-de-donnees-data-is-plural/734) the best data curation resources. A search will help you find international data that you would not otherwise find. 
 
 For example, the excellent[Data Is Plural Newsletter](https://tinyletter.com/data-is-plural/) provides a weekly presentation of the best datasets that are archived in a[spreadsheet] (https://docs.google.com/spreadsheets/d/1wZhPLMCHKJvwOkP4juclhjFgqIY8fQFMemwKL2c64vk/edit#gid=0)
 

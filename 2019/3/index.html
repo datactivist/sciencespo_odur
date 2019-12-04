@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <title>The Data Pipeline</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Samuel Goëta, Datactivist" />
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/datactivist.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/datactivist-fonts.css" rel="stylesheet" />
+    <link rel="stylesheet" href="libs/custom.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# The Data Pipeline
+## the pitfalls of reusing open datasets
+### Samuel Goëta, Datactivist
+### Sciences Po, 2019-12-04
+
+---
+
+class: center, middle
+
+#### These slides online: http://datactivist.coop/sciencespo_odur/2019/3/
+
+Source: https://github.com/datactivist/sciencespo_odur/2019/3/
+
+
+Datactivist's work is freely reusable licenced under [Creative Commons 4.0 BY-SA](https://creativecommons.org/licenses/by-sa/4.0/legalcode.fr).
+
+&lt;BR&gt;
+&lt;BR&gt;
+
+![](https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-sa.png)
+
+---
+
+### The Data Pipeline
+
+.pull-left[
+.reduite[![](https://schoolofdata.org/files/2016/07/Data-pipeline-v2-EN-471x1024.png)]
+]
+.pull-right[
+We will follow the [Data Pipeline](http://schoolofdata.org/methodology) methodology developed by School of Data. 
+
+* A generic methodology for the discovery and use of open data
+
+* 7 steps which, depending on the projects, take on a greater or lesser importance. 
+
+]
+
+
+---
+
+### Define
+
+.pull-left[
+.reduite[![](https://schoolofdata.org/files/2016/07/Data-pipeline-v2-EN-471x1024.png)]
+]
+.pull-right[
+
+###### Define your problem precisely
+
+###### What are you trying to understand?
+
+##### What data would you need?
+
+]
+
+---
+
+## To define is to find an angle about your topic
+
+![](./img/expe.png)
+.footnote[[](https://fr.okfn.org/2014/07/03/a-la-conquete-des-donnees-sur-la-pollution-de-lair/)]
+
+---
+
+### Find
+
+.pull-left[
+.reduite[![](https://schoolofdata.org/files/2016/07/Data-pipeline-v2-EN-471x1024.png)]
+
+]
+.pull-right[
+
+##### Use special search operators
+
+##### Search on open data portals
+
+##### Use facets to find the right data
+
+##### Extract data from OpenStreetMap
+
+##### Rely on [data curation resources]  (https://teamopendata.org/t/curation-de-donnees-data-is-plural/734)
+]
+
+---
+## Use special search operators
+
+Exemple with a "site:education.gouv.fr filetype:xlsx" :
+![](./img/filetype.gif)
+
+---
+### Use facets to find the right data
+
+.pull-left[
+![](./img/facettes.png)
+]
+
+.pull-right[
+Facets are filters in metadata. 
+
+For example, they allow you to select only a certain producer. 
+
+This can save a lot of time in a data search.
+]
+---
+### Use facets to find the right data
+
+![](./img/ECOLE.png)
+.pull-left[
+Without a facet filter, at the schools' request, we have surprising results on the first page like these FEMIS data.
+]
+
+.pull-right[
+By keeping only "National Education" in the organization facet, we ensure that we find national data. 
+]
+---
+### Using Google Dataset Search
+
+Google has been offering this[search engine](https://toolbox.google.com/datasetsearch) for some time now, which aggregates a large number of open data portals. The results are uneven but the engine is still new...
+
+[![](./img/datasetsearch.png)](https://toolbox.google.com/datasetsearch)
+
+---
+#### Search the[OpenDataSoft data network](data.opendatasoft.com)
+
+OpenDataSoft references all data sets published on all its portals. Among them, the Public portal refers to data sets that cannot be found elsewhere, such as the[location of radars] (https://data.opendatasoft.com/explore/dataset/radars%40public/table/). 
+![](./img/dataods.png)
+---
+### Find the right tag on OSM
+The"[Map Features] (https://wiki.openstreetmap.org/wiki/Map_Features)" page on the OSM wiki lists all the tags used in the database. 
+
+[![](./img/mapfeatures.png)](https://wiki.openstreetmap.org/wiki/FR:%C3%89l%C3%A9ments_cartographiques)
+.footnote[More info: https://datactivist.coop/atelier-osm/]
+
+---
+#### Use[data curation resources] (https://teamopendata.org/t/curation-de-donnees-data-is-plural/734)
+
+I have listed on[TeamOpenData] (https://teamopendata.org/t/curation-de-donnees-data-is-plural/734) the best data curation resources. A search will help you find international data that you would not otherwise find. 
+
+For example, the excellent[Data Is Plural Newsletter](https://tinyletter.com/data-is-plural/) provides a weekly presentation of the best datasets that are archived in a[spreadsheet] (https://docs.google.com/spreadsheets/d/1wZhPLMCHKJvwOkP4juclhjFgqIY8fQFMemwKL2c64vk/edit#gid=0)
+
+[![](./img/dataisplural.png)](https://docs.google.com/spreadsheets/d/1wZhPLMCHKJvwOkP4juclhjFgqIY8fQFMemwKL2c64vk/edit#gid=0)
+---
+#### Get 
+
+.pull-left[
+.reduced[![][](https://schoolofdata.org/files/2016/07/Data-pipeline-v2-EN-471x1024.png)]]
+]
+.pull-right[
+
+- ###### Direct download
+
+- ##### API or web service
+
+- ##### Data scrapping
+
+- ###### Copy / paste
+
+- ##### Extraction (OpenStreetMap)
+
+
+]
+
+---
+### Data scrapping: some tools
+
+import.io](import.io) is an excellent tool that makes it much easier to extract data from a website. The tool automatically detects the structure of the data on the site. 
+
+![](http://andrewbtran.github.io/JRN-418/class7/import3.png)
+.footnote[Loïc Haÿ has developed a[tutorial](https://www.dropbox.com/s/yarrneyseghd7d6/05-%20Extraire%20des%20donn%C3%A9es%20%C3%A0%20partir%20de%20pages%20web.pdf?dl=0) to use import.io.]
+
+---
+###  Data scrapping: some tools
+
+The [WebScraper](https://webscraper.io/) extension for Chrome allows you to make complexe scrapping processes.
+
+![](./img/scrap.gif)
+
+---
+### Extract data from OSM
+
+Overpass-Turbo](overpass-turbo.eu) allows you to extract specific elements from the OpenStreetMap database. Example here with schools in Yonne: 
+
+![](./img/overpass.gif)
+.footnote[More info: https://datactivist.coop/atelier-osm/]
+---
+
+## Verify 
+
+.pull-left[
+.reduced[![](https://schoolofdata.org/files/2016/07/Data-pipeline-v2-EN-471x1024.png)]]
+]
+
+.pull-right[
+
+- ##### Common sense
+
+- ##### Ask the source
+
+- ##### Rely on communities of experts
+
+- ##### Statistics
+
+
+]
+
+---
+### Rely on the comments in data.gouv.fr
+
+data.gouv.fr allows users to discuss data, this will help you to detect problems with the data. 
+
+[![](./img/rne.gif)](https://www.data.gouv.fr/fr/datasets/donnees-du-repertoire-national-des-elus/)
+
+---
+### WTFCsv to perform a quick data check
+
+[WTFCSV](https://www.databasic.io/en/wtfcsv/) is a data mediation tool that provides an overview of your CSV files. 
+
+[![](./img/wtfcsv.png)](https://www.databasic.io/en/wtfcsv/results/5b73338c9dfb0a00e15f07ff#tooltip)
+
+---
+### Clean 
+
+.pull-left[
+.reduite[![](https://schoolofdata.org/files/2016/07/Data-pipeline-v2-EN-471x1024.png)]
+]
+.pull-right[
+
+- #### Data cleaning
+
+- ##### Edition
+
+- #### Consolidation
+
+- ###### Frequent errors
+Format for dates
+The duplicates
+Spelling errors
+
+]
+
+---
+### OpenRefine for cleaning data
+
+[OpenRefine](http://openrefine.org/) is a powerful tool for exploring, transforming and reconciling data. 
+
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/cO8NVCs_Ba0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+.footnote[Mathieu Saby has published a[complete tutorial] (http://opendata.maregionsud.fr/fileadmin/user_upload/tx_ausynews/ODL/ODL_OpenRefine_Marseille_2017-06-09-v2.pdf). ]
+
+Translated with www.DeepL.com/Translator (free version)
+
+---
+### The [quality sprint](https://infolabs.io/sprint-qualite) to detect issues in the data
+
+[![](./img/sprint.png)](https://infolabs.io/sprint-qualite)
+
+---
+### Le [Quartz Bad Data Guide](https://infolabs.io/sprint-qualite) : a summary of issues with data quality
+
+[![](./img/quartz.gif)](https://github.com/Quartz/bad-data-guide)
+
+
+---
+
+## Analyser 
+
+.pull-left[
+.reduite[![](https://schoolofdata.org/files/2016/07/Data-pipeline-v2-EN-471x1024.png)]
+]
+
+.pull-right[
+
+#### Type of analysis
+- Statistical analysis
+- Spatial analysis
+
+#### Tools
+
+- Spreadsheet
+- R
+- QGIS (geo data)
+- Etc.
+
+]
+
+---
+
+### Present
+
+.pull-left[
+.reduite[![](https://schoolofdata.org/files/2016/07/Data-pipeline-v2-EN-471x1024.png)]
+]
+
+.pull-right[
+
+#### Communiquer les résultats de votre analyse au public.
+
+Flourish
+https://flourish.studio/
+
+Datawrapper
+https://www.datawrapper.de/
+
+Infogram
+https://infogram.com/
+
+DIVE
+https://dive.media.mit.edu/
+]
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

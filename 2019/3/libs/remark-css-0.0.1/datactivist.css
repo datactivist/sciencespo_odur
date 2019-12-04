@@ -1,0 +1,137 @@
+
+.remark-slide-content {
+  background-color: #fff1eb;
+}
+
+a, a > code {
+  color: #e95459;
+  text-decoration: none;
+}
+.footnote {
+  position: absolute;
+  bottom: 3em;
+  padding-right: 4em;
+  font-size: 90%;
+}
+.remark-code-line-highlighted     { background-color: #ffff88; }
+
+.inverse {
+  background-color: #173541;
+  color: #fff1eb;
+  text-shadow: 0 0 20px #333;
+}
+.inverse h1, .inverse h2, .inverse h3 {
+  color: #fff1eb;
+  line-height: 1.0em;
+}
+/* Two-column layout */
+.left-column {
+  color: #777;
+  width: 20%;
+  height: 92%;
+  float: left;
+}
+.left-column h2:last-of-type, .left-column h3:last-child {
+  color: #000;
+}
+.right-column {
+  width: 75%;
+  float: right;
+  padding-top: 1em;
+}
+.pull-left {
+  float: left;
+  width: 47%;
+}
+.pull-right {
+  float: right;
+  width: 47%;
+}
+.pull-right ~ * {
+  clear: both;
+}
+img {
+  max-width: 100%;
+}
+.reduite img {
+  max-height: 450px;
+}
+.reduite2 img {
+  max-height: 400px;
+}
+.reduite3 img {
+  max-height: 350px;
+}
+.mini img {
+  max-height: 50px;
+}
+blockquote {
+  border-left: solid 5px lightgray;
+  padding-left: 1em;
+}
+.red {
+  color: #e95459;
+}
+
+.title-slide {
+  background-size: cover;
+  background-position: 50% 50%;
+  background-color: #fff1eb;
+}
+
+.title-slide .remark-slide-number {
+  display: none;
+}
+.title-slide h1, .title-slide h2, .title-slide h3 {
+  text-shadow: 0 0 20px #fff;
+  color: #173541;
+}
+.title-slide h1 {
+  color: #e95459;
+}
+.pictos img {
+  background-color: #000000;
+}
+
+div.my-header {
+    background-color: #173541;
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ffb76b), color-stop(0%,#ffa73d), color-stop(0%,#ffffff), color-stop(10%,#ffffff), color-stop(25%,#173541), color-stop(100%,#173541));
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 30px;
+    width: 100%;
+    text-align: left;
+}
+
+div.my-footer {
+    background-color: #173541;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 25px;
+    width: 100%;
+}
+div.my-footer span {
+    font-size: 10pt;
+    color: #F7F8FA;
+    position: absolute;
+    left: 15px;
+    bottom: 5px;
+}
+
+div.my-footer .logo {
+    font-size: 10pt;
+    color: #F7F8FA;
+    position: absolute;
+    left: 415px;
+    bottom: 5px;
+}
+
+.remark-slide-number {
+  font-size: 10pt;
+  margin-bottom: -8px;
+  margin-right: 10px;
+  color: #FFFFFF; /* white */
+  opacity: 1; /* default: 0.5 */
+}

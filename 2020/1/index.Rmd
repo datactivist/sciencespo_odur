@@ -121,15 +121,14 @@ Where? TBD
   - **50% of your total grade** 
   - Individual exercise during or after the class 
   - Short questions to ensure you understood course materials
-  - To be submitted 48 hours after sent 
+  - To be submitted before next class (or within a week)
 
 - **Final Exam** : .red[**DEADLINE OCT 15**]
-  - **50% of your total grade**: a 2-pages (graph/map included) note, **.red[1]** page of annex **MAX** allowed, for your Head of cabinet with the main result you got by analysing this data
+  - **50% of your total grade**: a 2-pages (graph/map included) note, **.red[1]** page of annex **MAX** allowed, for the Chief of Staff of the City Hall with the main result you got by analysing this data
     - Find an interesting dataset opened by govt or local authorities or public companies related to urban matter.
     - Analyze the data, cross the data to strenghten your analysis, transform the data to produce a graph or a map displaying the key results
     - If relevant, provide a real policy recommendation based on your results
     - Explain the limits of the data you worked with (quality, scope, granularity..)
-    - Share the results on Github (or other Git tools) with documentation
 
 ---
 ### May the data be with you !
@@ -279,7 +278,7 @@ In the linkage of cybernetics and free software movements
 ### [.red[The multiple facets of open data:]](https://books.openedition.org/cdf/5005?lang=fr) transform government
 
 
-.reduite[.center[![](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/D%C3%A9mocratie_Ouverte.png/800px-D%C3%A9mocratie_Ouverte.png]]
+.reduite[.center[![](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/D%C3%A9mocratie_Ouverte.png/800px-D%C3%A9mocratie_Ouverte.png)]]
 
 ---
 ### Open data : definition
@@ -314,7 +313,7 @@ class:
 - **Economic opportunities**
 
 ---
-### Open data : key milestones
+### Open data : key milestones (in France - compare to your home country?)
 
 ![](https://gidoin.github.io/sciencespodata/img/chrono.png)
 
@@ -551,9 +550,9 @@ Then in 2018, OGP supported the launch of a global Community of Practice on Tran
 
 > This Community of Practice will support peer learning, networking, and wider awareness and capacity development on open governance and public integrity at the local level. 
 
----#
+---
+class:inverse, middle, center
 
-class:cenerse, middle, center
 # Open Data platforms
 
 ---
@@ -634,8 +633,7 @@ According to you, how can we improve data findability ?
 
 Summer 2017, Datactivist realized a census of all the datasets opened by 15 major French cities (Paris, Lyon, Lille, Nantes...). More than 400 datasets were listed but identifying them was not easy at all...
 
-.center[<im
-g src="./ihttps://datactivist.coop/ubordeaux//recensement3.pg" height="350"/>] 
+.center[<img src="https://datactivist.coop/ubordeaux/img/recensement.png" height="350"/>] 
 
 
 .footnote[[Medium article](https://medium.com/datactivist/qui-a-ouvert-quoi-le-recensement-des-donn%C3%A9es-des-villes-est-maintenant-ouvert-b7f697135c1f)]
@@ -716,18 +714,18 @@ Sometimes data are well too agregated...
 ---
 ### Challenge 2 : data quality
 
-Or hardly exploitable...
+Or hardly usable...
 
-.center[<img src="https://github.com/Gidoin/sciencespodata/raw/master/img/recensement2.png" height="350"/>] 
+.center[<img src="https://raw.githubusercontent.com/Gidoin/sciencespodata/master/img/recensement2.png" height="350"/>]
 
 .footnote[[Source](https://medium.com/datactivist/qui-a-ouvert-quoi-le-recensement-des-donn%C3%A9es-des-villes-est-maintenant-ouvert-b7f697135c1f)]
 
 ---
 ### Challenge 2 : data quality
 
-Or hardly exploitable...
+Or hardly usable...
 
-.center[<img src="https://https://github.com/Gidoin/sciencespodata/raw/master/img/recensement1.png" height="350"/>] 
+.center[<img src="https://raw.githubusercontent.com/Gidoin/sciencespodata/master/img/recensement1.png" height="350"/>] 
 
 
 .footnote[[Source](https://medium.com/datactivist/qui-a-ouvert-quoi-le-recensement-des-donn%C3%A9es-des-villes-est-maintenant-ouvert-b7f697135c1f)]
@@ -749,7 +747,7 @@ Or hardly exploitable...
 ---
 ### Tidy data
 
-.center[<img src="https://github.com/Gidoin/sciencespodata/raw/master/img/hadley.jpg" height="250"/>] 
+[.center[<img src="https://github.com/Gidoin/sciencespodata/raw/master/img/hadley.jpg" height="250"/>]](https://en.wikipedia.org/wiki/Hadley_Wickham)
 
 --
 
@@ -767,7 +765,7 @@ Or hardly exploitable...
 - Each observation is placed in its own row
 - Each value is placed in its own cell
 
-.center[<img src="./img/tidydata.png" height="200"/>] 
+.center[<img src="https://garrettgman.github.io/images/tidy-1.png" height="200"/>] 
 
 ---
 ### See you next week!

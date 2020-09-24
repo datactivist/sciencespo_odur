@@ -5,13 +5,13 @@ Master Governing the Large Metropolis
 
 Sciences Po, urban school
 
-Academic Year 2019/2020
+Academic Year 2020/2021
 
 ## Instructors
 
-Samuel Goëta	([Datactivist](datactivist.coop))
+Joël Gombin	([Datactivist](datactivist.coop)
 
-Many thanks to François Briatte	(ESPOL, Université Catholique de Lille) and Joël Gombin	(Datactivist) with whom this class was taught for 5 years, in coordination with Antoine Jardin. 
+Many thanks to Samuel Goëta who taught this class for the pas few years. Previously, this class was taught for 5 years with François Briatte	(ESPOL, Université Catholique de Lille) and Samuel Goëta (Datactivist), in coordination with Antoine Jardin (CNRS).
 
 ## Course Outline
 This workshop offers a critical analysis of how urban-level data are produced, interpreted, and, increasingly, released to the public. It was designed specifically for this Masters, alongside the “Advanced Quantitative Methods” course, which enables students to build on their existing statistical training by mixing qualitative and quantitative insights.
@@ -25,30 +25,37 @@ At the end of the class, students will:
 - understand the process and best practices to reuse open datasets.
 
 
-## [Class 1 - Open Data 101 : the origins and principles of a growing movement](http://datactivist.coop/sciencespo_odur/2019/1/)
+## [Class 1 - Open Data 101 : the origins and principles of a growing movement](http://datactivist.coop/sciencespo_odur/2020/1/)
 
-Slides: http://datactivist.coop/sciencespo_odur/2019/1/
+Slides: http://datactivist.coop/sciencespo_odur/2020/1/
 
-Date: November 21, 2019 (12:30 - 16:45)
-Where?	9, rue de la Chaise 911
+Date: September 24, 2020 (12:30 - 16:45)
+
+Where?	Online
 
 Reading:
 - Harlan Yu and David G. Robinson, “The New Ambiguity of ‘Open Government’”[UCLA Law Review 59(178), 2012](https://www.uclalawreview.org/pdf/discourse/59-11.pdf)
 
-## [Class 2 - The Open Data Lifecycle: how open datasets are opened in the backroom of government administrations?](http://datactivist.coop/sciencespo_odur/2019/2/)
+## [Class 2 - The Open Data Lifecycle: how open datasets are opened in the backroom of government administrations?](http://datactivist.coop/sciencespo_odur/2020/2/)
 
-Slides: http://datactivi.st/sciencespo_odur2018/class2/
+Slides: http://datactivi.st/sciencespo_odur/2020/2/
 
-Date: November 28, 2019 (08:00 😢 - 12:15)
-Where? 117, bd Saint-Germain 721
+Date: October 1st, 2020 (15:30 - 16:45)
+
+Where? TBD
 
 Reading: 
 - Jérôme Denis, Samuel Goëta. [Rawification and the careful generation of open government data. Social Studies of Science](https://halshs.archives-ouvertes.fr/halshs-01617976/document), SAGE Publications, 2017, 47 (5), pp.604 - 629. 
 
 
-## [Class 3 - The Data Pipeline: the pitfalls of reusing open datasets](http://datactivist.coop/sciencespo_odur/2019/3/)
-Date: December 4th,  4PM-7PM
-Where: 	117, bd Saint-Germain 740
+## [Class 3 - The Data Pipeline: the pitfalls of reusing open datasets](http://datactivist.coop/sciencespo_odur/2020/3/)
+
+Slides: http://datactivi.st/sciencespo_odur/2020/3/
+
+
+Date: October 8, 2020 (15:30 - 16:45)
+
+Where?	TBD
 
 Readings:
 - Kieran Healy and James Moody, “Data Visualization in Sociology”  

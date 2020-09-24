@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <title>The Open Data Lifecycle</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Samuel Goëta, Datactivist" />
+    <meta name="date" content="2019-11-28" />
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/datactivist.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/datactivist-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# The Open Data Lifecycle
+## How datasets are opened in the backroom of government administrations?
+### Samuel Goëta, Datactivist
+### 2019-11-28
+
+---
+
+
+layout: true
+
+&lt;style&gt;
+.remark-slide-number {
+  position: inherit;
+}
+
+.remark-slide-number .progress-bar-container {
+  position: absolute;
+  bottom: 0;
+  height: 4px;
+  display: block;
+  left: 0;
+  right: 0;
+}
+
+.remark-slide-number .progress-bar {
+  height: 100%;
+  background-color: #e95459;
+}
+
+&lt;/style&gt;
+
+
+&lt;div class='my-footer'&gt;&lt;span&gt;Sciences Po (ODUR) the Open Data Lifecycle&lt;/span&gt; &lt;center&gt;&lt;div class=logo&gt;&lt;img src='https://github.com/datactivist/slides_datactivist/raw/master/inst/rmarkdown/templates/xaringan/resources/img/fond_noir_monochrome.png' width='100px'&gt;&lt;/center&gt;&lt;/span&gt;&lt;/div&gt; 
+
+
+---
+
+class: center, middle
+
+#### These slides online: http://datactivist.coop/sciencespo_odur/2019/2/
+
+Source: https://github.com/datactivist/sciencespo_odur/2019/2/
+
+
+Datactivist's work is freely reusable licenced under [Creative Commons 4.0 BY-SA](https://creativecommons.org/licenses/by-sa/4.0/legalcode.fr).
+
+&lt;BR&gt;
+&lt;BR&gt;
+
+![](https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-sa.png)
+
+
+---
+class: inverse, center, middle
+
+# The lifecycle of open data
+
+---
+### Open Data Pipeline: the main step in opening a dataset
+
+.reduite[.pull-left[
+![](pipeline.png)
+]]
+
+.pull-right[
+The Open Data Pipeline is a modelisation of the open data lifecycle in 7 steps based on my [research](https://pastel.archives-ouvertes.fr/tel-01458098). 
+
+Each of the step can hold a major or a minor importance depending on the dataset and the organisational contexts. 
+
+Sometimes, when opening a dataset, one needs to come back to an earlier step. 
+
+**Objective**: understand how data is generaly opened by government administrations. 
+]
+---
+### The circulation of dada provokes frictions
+
+
+&gt; Friction resists and impedes. At every interface between two surfaces, friction consumes energy, produces heat, and wears down moving parts. […] 
+&gt; Every movement of data across an interface comes at some cost in time, energy, and human attention. Every interface between groups and organizations, as well as between machines, represents a point of resistance where data can be garbled, misinterpreted, or lost. 
+&gt; In social systems, data friction consumes energy and produces turbulence and heat – that is, conflicts, disagreements, and inexact, unruly processes.
+
+Edwards, P. N. et al. (2011) [‘Science friction: Data, metadata, and collaboration’](https://journals.sagepub.com/doi/abs/10.1177/0306312711413314), _Social Studies of Science_, 41(5)
+
+---
+### Identification
+
+.pull-left[
+![](https://datactivist.coop/aaf/img/identifier.png)
+]
+
+.pull-right[
+* Meet the data producers
+
+* Explore data released by other organisations
+
+* Map an organisation's data ([Data Galaxy](https://www.datagalaxy.com/produit/) for instance)
+
+* Document data
+
+]
+
+---
+### Data inventory: a longterm process
+
+.pull-left[
+[![](https://datactivist.coop/aaf/img/iden_etalab.png)](https://www.data.gouv.fr/fr/datasets/recensement-indicatif-des-donnees-publiques-issues-des-services-publics-de-letat/)
+]
+.pull-right[
+* The utopy of an exhaustive catalog
+
+
+* An exploratory process
+
+
+* Link an organisation's process with the information systems
+
+]
+
+---
+### Approve
+
+.pull-left[
+![](https://datactivist.coop/aaf/img/valider.png)
+]
+
+.pull-right[
+* Obtain approval from the hierarchy
+
+* Prioritize the opening of datasets
+
+* Check the judicial or technical datasets
+
+]
+
+---
+### "Good organisational reasons" for not opening a dataset
+
+* Data hosted on information systems: explore databases, rebuild database schemas and extract the data
+
+
+* Check if the data can serve harmful users: foresee the risks of reusing data
+
+
+* Improve quality and intelligibility of data which were designed to circulate outside of the organisation
+
+
+* Data is too sensitive to be opened without a mandate from the elected officials or the hierarchy 
+
+---
+### Edit
+
+.pull-left[
+![](https://datactivist.coop/aaf/img/editer.png)
+]
+
+.pull-right[
+_data editing designates the operations with which statisticians transform administrative data into statistical objects (Desrosières 2005)_
+
+* Anonymise the data  
+
+* Reduce sensitivy of data which could not be opened. 
+
+* Improve intelligibility of data by explaining acronyms or technical terms  
+
+* Improve the quality of the data 
+
+]
+
+---
+### Data quality sprint by la Fing 
+
+More than 120 checkpoints to verify the quality of data (translated by GLM students!)
+[![](https://datactivist.coop/aaf/img/sprint.png)](https://infolabs.io/sprint-qualite)
+
+---
+### [Dataproofer](http://dataproofer.org/): a tool to automatically control the quality of data
+
+![](https://datactivist.coop/aaf/img/dataproofer.png)
+---
+### [WTFCSV](https://databasic.io/en/wtfcsv/) to pre-visualise a dataset
+
+![](https://datactivist.coop/aaf/img/wtfcsv.png)
+
+---
+### [Workbench](workbenchdata.com) to transform data
+
+![](workbench.png)
+---
+### Standardise
+
+.pull-left[
+![](https://datactivist.coop/aaf/img/standardiser.png)
+]
+
+.pull-right[
+* Convert data to an open and machine readable format 
+
+* Adopt shared standards: GTFS, GBFS, DECP, IATI, OCDS…
+
+* Transform the data
+
+]
+
+---
+### Transform data into CSV: much more than "save as"
+
+.center[.reduite[
+![](https://datactivist.coop/aaf/img/excel1.png)](http://fr.slideshare.net/christophelibertidf/bonnes-pratiquesexcel-cc27juin2013)
+]]
+
+---
+### Transform data into CSV: much more than "save as"
+
+.center[.reduite[
+![](https://datactivist.coop/aaf/img/excel2.png)](http://fr.slideshare.net/christophelibertidf/bonnes-pratiquesexcel-cc27juin2013)
+]]
+---
+### Transform data into CSV: much more than "save as"
+
+.center[.reduite[
+![](https://datactivist.coop/aaf/img/excel3.png)](http://fr.slideshare.net/christophelibertidf/bonnes-pratiquesexcel-cc27juin2013)
+]]
+
+---
+### Transform data into CSV: much more than "save as"
+
+.center[.reduite[
+![](https://datactivist.coop/aaf/img/excel4.png)](http://fr.slideshare.net/christophelibertidf/bonnes-pratiquesexcel-cc27juin2013)
+]]
+
+---
+### Publish
+
+.pull-left[
+![](https://datactivist.coop/aaf/img/publier.png)
+]
+
+.pull-right[
+* Import the data in the portal
+
+* Describe the data
+
+* Document the metadata
+]
+
+---
+### [Datasheet for Datasets](https://teamopendata.org/t/traduction-et-adaptation-du-modele-de-description-des-donnees-datasheet-for-datasets/1400): a model to document a dataset
+
+.reduite.center[
+![](https://datactivist.coop/aaf/img/datasheet.png)
+]
+
+---
+### Update
+
+.pull-left[
+![](https://datactivist.coop/aaf/img/update.png)
+]
+
+.pull-right[
+
+* Update manually or automatically a dataset
+
+* Archive the data
+
+* Consider and implement user feedbacks
+
+]
+---
+### Keys of success
+
+.pull-left[
+- obtain high level support
+
+- create the organisational channels to open data
+
+- ease discoverability and reuse of data
+
+- interact with users]
+
+.pull-right[
+![](https://datactivist.coop/recife/img/canvas.png)
+]
+
+---
+### 10 commandements of an open data projects
+
+![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LRRjDnyXFOdz0BEMwzj%2F-LhkGXlPhynQ4paEwIHR%2F-LhkGcdcC2LLAaZp8efD%2FAffiche_opendata-01.png?alt=media&amp;token=2337a1c4-e060-4b9f-82d7-de1e5859f781)
+
+---
+class: inverse, center, middle
+### See you next week!
+
+.center[&lt;img src="https://media.giphy.com/media/L2dgNOcnbj2QE/giphy.gif" height="400"/&gt;]
+
+Contact : [samuel@datactivist.coop](mailto:samuel@datactivist.coop)
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="macros.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"slideNumberFormat": "<div class=\"progress-bar-container\">   <div class=\"progress-bar\" style=\"width: calc(%current% / %total% * 100%);\">   </div> </div>` "
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

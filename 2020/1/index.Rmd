@@ -16,7 +16,7 @@ output:
         <div class="progress-bar-container">
           <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
           </div>
-        </div>`
+        </div>
 params:
   event: Sciences Po Open Data for Urban Research - class 1
   slug: sciencespo_odur

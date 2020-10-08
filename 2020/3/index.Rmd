@@ -1,7 +1,7 @@
 ---
 title: "The Data Pipeline"
 subtitle: "the pitfalls of reusing open datasets"
-author: "Samuel Goëta, Datactivist"
+author: "Joël Gombin, Datactivist"
 date: "Sciences Po, `r Sys.Date()`"
 output:
   SlidesDatactivist::moon_reader:
@@ -13,7 +13,7 @@ output:
       countIncrementalSlides: false
 params:
   event: The Data Pipeline
-  slug: sciencespo_odur/2019/3/
+  slug: sciencespo_odur/2020/3/
 
 ---
 class: center, middle
@@ -35,14 +35,16 @@ Datactivist's work is freely reusable licenced under [Creative Commons 4.0 BY-SA
 ### The Data Pipeline
 
 .pull-left[
-.reduite[![](https://schoolofdata.org/files/2016/07/Data-pipeline-v2-EN-471x1024.png)]
+.reduite[
+![](./Data-pipeline.png)
+]
 ]
 .pull-right[
-We will follow the [Data Pipeline](http://schoolofdata.org/methodology) methodology developed by School of Data. 
+We will follow the [Data Pipeline](http://schoolofdata.org/methodology) methodology developed by the [School of Data](https://schoolofdata.org/). 
 
 * A generic methodology for the discovery and use of open data
 
-* 7 steps which, depending on the projects, take on a greater or lesser importance. 
+* 7 steps which, depending on the projects, are more or less important. 
 
 ]
 
@@ -52,7 +54,9 @@ We will follow the [Data Pipeline](http://schoolofdata.org/methodology) methodol
 ### Define
 
 .pull-left[
-.reduite[![](https://schoolofdata.org/files/2016/07/Data-pipeline-v2-EN-471x1024.png)]
+.reduite[
+![](./Data-pipeline.png)
+]
 ]
 .pull-right[
 
@@ -76,7 +80,7 @@ We will follow the [Data Pipeline](http://schoolofdata.org/methodology) methodol
 ### Find
 
 .pull-left[
-.reduite[![](https://schoolofdata.org/files/2016/07/Data-pipeline-v2-EN-471x1024.png)]
+.reduite[![](./Data-pipeline.png)]
 
 ]
 .pull-right[
@@ -121,8 +125,9 @@ Without a facet filter, at the schools' request, we have surprising results on t
 ]
 
 .pull-right[
-By keeping only "National Education" in the organization facet, we ensure that we find national data. 
+By keeping only "Education nationale" in the organization facet, we ensure that we find national data. 
 ]
+
 ---
 ### Using Google Dataset Search
 
@@ -131,31 +136,35 @@ Google has been offering this[search engine](https://toolbox.google.com/datasets
 [![](./img/datasetsearch.png)](https://toolbox.google.com/datasetsearch)
 
 ---
-### Search the[OpenDataSoft data network](data.opendatasoft.com)
+### Search the [OpenDataSoft data network](https://data.opendatasoft.com)
 
-OpenDataSoft references all data sets published on all its portals. Among them, the Public portal refers to data sets that cannot be found elsewhere, such as the[location of radars] (https://data.opendatasoft.com/explore/dataset/radars%40public/table/). 
+OpenDataSoft references all data sets published on all its portals. Among them, the Public portal refers to data sets that cannot be found elsewhere, such as the [location of speed radars](https://data.opendatasoft.com/explore/dataset/radars%40public/table/). 
 ![](./img/dataods.png)
 ---
 ### Find the right tag on OSM
-The"[Map Features] (https://wiki.openstreetmap.org/wiki/Map_Features)" page on the OSM wiki lists all the tags used in the database. 
+The "[Map Features](https://wiki.openstreetmap.org/wiki/Map_Features)" page on the OSM wiki lists all the tags used in the database. 
 
 [![](./img/mapfeatures.png)](https://wiki.openstreetmap.org/wiki/FR:%C3%89l%C3%A9ments_cartographiques)
 .footnote[More info: https://datactivist.coop/atelier-osm/]
 
 ---
-### Use[data curation resources](https://teamopendata.org/t/curation-de-donnees-data-is-plural/734)
+### Use [data curation resources](https://teamopendata.org/t/curation-de-donnees-data-is-plural/734)
 
-I have listed on[TeamOpenData](https://teamopendata.org/t/curation-de-donnees-data-is-plural/734) the best data curation resources. A search will help you find international data that you would not otherwise find. 
+We have listed on [TeamOpenData](https://teamopendata.org/t/curation-de-donnees-data-is-plural/734) the best data curation resources. A search will help you find international data that you would not otherwise find. 
 
-For example, the excellent[Data Is Plural Newsletter](https://tinyletter.com/data-is-plural/) provides a weekly presentation of the best datasets that are archived in a[spreadsheet] (https://docs.google.com/spreadsheets/d/1wZhPLMCHKJvwOkP4juclhjFgqIY8fQFMemwKL2c64vk/edit#gid=0)
+For example, the excellent [Data Is Plural Newsletter](https://tinyletter.com/data-is-plural/) provides a weekly presentation of the best datasets that are archived in a [spreadsheet](https://docs.google.com/spreadsheets/d/1wZhPLMCHKJvwOkP4juclhjFgqIY8fQFMemwKL2c64vk/edit#gid=0)
 
 [![](./img/dataisplural.png)](https://docs.google.com/spreadsheets/d/1wZhPLMCHKJvwOkP4juclhjFgqIY8fQFMemwKL2c64vk/edit#gid=0)
+
 ---
-#### Get 
+### Get 
 
 .pull-left[
-.reduced[![][](https://schoolofdata.org/files/2016/07/Data-pipeline-v2-EN-471x1024.png)]]
+.reduite[
+![](./Data-pipeline.png)
 ]
+]
+
 .pull-right[
 
 - ###### Direct download
@@ -174,10 +183,10 @@ For example, the excellent[Data Is Plural Newsletter](https://tinyletter.com/dat
 ---
 ### Data scrapping: some tools
 
-import.io](import.io) is an excellent tool that makes it much easier to extract data from a website. The tool automatically detects the structure of the data on the site. 
+[import.io](https://import.io) is an excellent tool that makes it much easier to extract data from a website. The tool automatically detects the structure of the data on the site. 
 
 ![](http://andrewbtran.github.io/JRN-418/class7/import3.png)
-.footnote[Loïc Haÿ has developed a[tutorial](https://www.dropbox.com/s/yarrneyseghd7d6/05-%20Extraire%20des%20donn%C3%A9es%20%C3%A0%20partir%20de%20pages%20web.pdf?dl=0) to use import.io.]
+.footnote[Loïc Haÿ has developed a [tutorial](https://www.dropbox.com/s/yarrneyseghd7d6/05-%20Extraire%20des%20donn%C3%A9es%20%C3%A0%20partir%20de%20pages%20web.pdf?dl=0) to use import.io.]
 
 ---
 ###  Data scrapping: some tools
@@ -189,7 +198,7 @@ The [WebScraper](https://webscraper.io/) extension for Chrome allows you to make
 ---
 ### Extract data from OSM
 
-Overpass-Turbo](overpass-turbo.eu) allows you to extract specific elements from the OpenStreetMap database. Example here with schools in Yonne: 
+[Overpass-Turbo](overpass-turbo.eu) allows you to extract specific elements from the OpenStreetMap database. Example here with schools in the Yonne département: 
 
 ![](./img/overpass.gif)
 .footnote[More info: https://datactivist.coop/atelier-osm/]
@@ -198,8 +207,10 @@ Overpass-Turbo](overpass-turbo.eu) allows you to extract specific elements from 
 ## Verify 
 
 .pull-left[
-.reduced[![](https://schoolofdata.org/files/2016/07/Data-pipeline-v2-EN-471x1024.png)]]
-]
+.reduite[
+![](./Data-pipeline.png)
+]]
+
 
 .pull-right[
 
@@ -222,7 +233,7 @@ data.gouv.fr allows users to discuss data, this will help you to detect problems
 [![](./img/rne.gif)](https://www.data.gouv.fr/fr/datasets/donnees-du-repertoire-national-des-elus/)
 
 ---
-### WTFCsv to perform a quick data check
+### WTFCSV to perform a quick data check
 
 [WTFCSV](https://www.databasic.io/en/wtfcsv/) is a data mediation tool that provides an overview of your CSV files. 
 
@@ -232,7 +243,7 @@ data.gouv.fr allows users to discuss data, this will help you to detect problems
 ### Clean 
 
 .pull-left[
-.reduite[![](https://schoolofdata.org/files/2016/07/Data-pipeline-v2-EN-471x1024.png)]
+.reduite[![](./Data-pipeline.png)]
 ]
 .pull-right[
 
@@ -244,7 +255,9 @@ data.gouv.fr allows users to discuss data, this will help you to detect problems
 
 - ###### Frequent errors
 Format for dates
-The duplicates
+
+Duplicates
+
 Spelling errors
 
 ]
@@ -266,17 +279,19 @@ Translated with www.DeepL.com/Translator (free version)
 [![](./img/sprint.png)](https://infolabs.io/sprint-qualite)
 
 ---
-### Le [Quartz Bad Data Guide](https://infolabs.io/sprint-qualite) : a summary of issues with data quality
+### The [Quartz Bad Data Guide](https://infolabs.io/sprint-qualite) : a summary of issues with data quality
 
 [![](./img/quartz.gif)](https://github.com/Quartz/bad-data-guide)
 
 
 ---
 
-## Analyser 
+### Analyse
 
 .pull-left[
-.reduite[![](https://schoolofdata.org/files/2016/07/Data-pipeline-v2-EN-471x1024.png)]
+.reduite[
+![](./Data-pipeline.png)
+]
 ]
 
 .pull-right[
@@ -299,12 +314,12 @@ Translated with www.DeepL.com/Translator (free version)
 ### Present
 
 .pull-left[
-.reduite[![](https://schoolofdata.org/files/2016/07/Data-pipeline-v2-EN-471x1024.png)]
+.reduite[![](./Data-pipeline.png)]
 ]
 
 .pull-right[
 
-#### Communiquer les résultats de votre analyse au public.
+#### Communicate your work to your audience
 
 Flourish
 https://flourish.studio/

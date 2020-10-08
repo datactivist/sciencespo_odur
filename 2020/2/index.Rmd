@@ -1,7 +1,7 @@
 ---
 title: "The Open Data Lifecycle"
 subtitle: "How datasets are opened in the backroom of government administrations?"
-author: "Samuel Goëta, Datactivist"
+author: "Joël Gombin, Datactivist"
 date: "`r Sys.Date()`"
 output:
   SlidesDatactivist::moon_reader:
@@ -19,7 +19,7 @@ output:
         </div>`
 params:
   event: Sciences Po (ODUR) the Open Data Lifecycle 
-  slug: sciencespo_odur/2019/2/
+  slug: sciencespo_odur/2020/2/
 ---
 
 layout: true
@@ -79,7 +79,7 @@ class: inverse, center, middle
 ]]
 
 .pull-right[
-The Open Data Pipeline is a modelisation of the open data lifecycle in 7 steps based on my [research](https://pastel.archives-ouvertes.fr/tel-01458098). 
+The Open Data Pipeline is a modelisation of the open data lifecycle in 7 steps based on Samuel Goeta's [research](https://pastel.archives-ouvertes.fr/tel-01458098). 
 
 Each of the step can hold a major or a minor importance depending on the dataset and the organisational contexts. 
 
@@ -221,28 +221,33 @@ More than 120 checkpoints to verify the quality of data (translated by GLM stude
 ### Transform data into CSV: much more than "save as"
 
 .center[.reduite[
-![](https://datactivist.coop/aaf/img/excel1.png)](http://fr.slideshare.net/christophelibertidf/bonnes-pratiquesexcel-cc27juin2013)
+[![](https://datactivist.coop/aaf/img/excel1.png)](http://fr.slideshare.net/christophelibertidf/bonnes-pratiquesexcel-cc27juin2013)
 ]]
 
 ---
 ### Transform data into CSV: much more than "save as"
 
 .center[.reduite[
-![](https://datactivist.coop/aaf/img/excel2.png)](http://fr.slideshare.net/christophelibertidf/bonnes-pratiquesexcel-cc27juin2013)
+[![](https://datactivist.coop/aaf/img/excel2.png)](http://fr.slideshare.net/christophelibertidf/bonnes-pratiquesexcel-cc27juin2013)
 ]]
 ---
 ### Transform data into CSV: much more than "save as"
 
 .center[.reduite[
-![](https://datactivist.coop/aaf/img/excel3.png)](http://fr.slideshare.net/christophelibertidf/bonnes-pratiquesexcel-cc27juin2013)
+[![](https://datactivist.coop/aaf/img/excel3.png)](http://fr.slideshare.net/christophelibertidf/bonnes-pratiquesexcel-cc27juin2013)
 ]]
 
 ---
 ### Transform data into CSV: much more than "save as"
 
 .center[.reduite[
-![](https://datactivist.coop/aaf/img/excel4.png)](http://fr.slideshare.net/christophelibertidf/bonnes-pratiquesexcel-cc27juin2013)
+[![](https://datactivist.coop/aaf/img/excel4.png)](http://fr.slideshare.net/christophelibertidf/bonnes-pratiquesexcel-cc27juin2013)
 ]]
+
+---
+### Transform data into CSV: much more than "save as"
+
+See also [this tutorial](https://infolabs.io/sites/default/files/files/comment_produire_un_fichier_csv_de_qualite_1.1.pdf)
 
 ---
 ### Publish
@@ -263,7 +268,7 @@ More than 120 checkpoints to verify the quality of data (translated by GLM stude
 ### [Datasheet for Datasets](https://teamopendata.org/t/traduction-et-adaptation-du-modele-de-description-des-donnees-datasheet-for-datasets/1400): a model to document a dataset
 
 .reduite.center[
-![](https://datactivist.coop/aaf/img/datasheet.png)
+![](./datasheet.png)
 ]
 
 ---
@@ -305,8 +310,8 @@ More than 120 checkpoints to verify the quality of data (translated by GLM stude
 
 ---
 class: inverse, center, middle
-### See you next week!
+### Let's have a final meeting time?
 
 .center[<img src="https://media.giphy.com/media/L2dgNOcnbj2QE/giphy.gif" height="400"/>]
 
-Contact : [samuel@datactivist.coop](mailto:samuel@datactivist.coop)
+Contact : [joel@datactivist.coop](mailto:joel@datactivist.coop)

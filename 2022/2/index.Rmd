@@ -1,0 +1,82 @@
+---
+title: "Class 2: Practical activities"
+subtitle: ""
+author: "Joël Gombin"
+date: "Sciences Po, `r Sys.Date()`"
+output:
+  SlidesDatactivist::moon_reader:
+    css: [default, datactivist, datactivist-fonts]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      beforeInit: ["macros.js", "https://platform.twitter.com/widgets.js"]
+      slideNumberFormat: |
+        <div class="progress-bar-container">
+          <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
+          </div>
+        </div>
+params:
+  event: Sciences Po Open Data for Urban Research - class 2
+  slug: sciencespo_odur
+---
+
+layout: true
+
+```{=html}
+<style>
+.remark-slide-number {
+  position: inherit;
+}
+
+.remark-slide-number .progress-bar-container {
+  position: absolute;
+  bottom: 0;
+  height: 4px;
+  display: block;
+  left: 0;
+  right: 0;
+}
+
+.remark-slide-number .progress-bar {
+  height: 100%;
+  background-color: #e95459;
+}
+
+</style>
+```
+`r paste0("<div class='my-footer'><span>", params$event, "</span> <center><div class=logo><img src='https://github.com/datactivist/slides_datactivist/raw/master/inst/rmarkdown/templates/xaringan/resources/img/fond_noir_monochrome.png' width='100px'></center></span></div>")`
+
+------------------------------------------------------------------------
+
+class: center, middle
+
+These slides online: `r paste0("http://datactivist.coop/", params$slug, "/2022/2/")`
+
+Source: `r paste0("https://github.com/datactivist/", params$slug)`
+
+Datactivist's work is freely reusable licenced under [Creative Commons 4.0 BY-SA](https://creativecommons.org/licenses/by-sa/4.0/legalcode.fr).
+
+.center[*The content of this presentation is partly inspired by Samuel Goëta's class at Sciences Po Aix.*]
+
+![](https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-sa.png)
+
+---
+class: inverse, center, middle
+
+# Let's sum up what we learned during the previous class
+
+https://airtable.com/shrajAoJJdO2KcxY7
+
+---
+class: inverse, center, middle
+
+# Data in the city / design and ethical issues
+
+http://souriezvousetescaptes.fr/wp-content/uploads/2021/07/SouriezVousEtesCaptes_ebook.pdf
+
+https://docs.google.com/presentation/d/1ie8Qjw_8IIpn-_OPKuLqGpW-AeKk0Nji6rg2Vzyz1Ew/edit?usp=sharing
+
+
+

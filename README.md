@@ -39,9 +39,9 @@ Reading:
 
 
 
-## [Class 2 - hands-on activities TBD)
+## [Class 2 - smart cities, sensors and data - hands-on activities](http://datactivist.coop/sciencespo_odur/2022/2/)
 
-Slides: http://datactivi.st/sciencespo_odur/2022/2/
+Slides: http://datactivist.coop/sciencespo_odur/2022/2/
 
 Date: October 21, 2022 (08:00 - 12:15)
 

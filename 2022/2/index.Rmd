@@ -24,7 +24,6 @@ params:
 
 layout: true
 
-```{=html}
 <style>
 .remark-slide-number {
   position: inherit;
@@ -45,10 +44,10 @@ layout: true
 }
 
 </style>
-```
+
 `r paste0("<div class='my-footer'><span>", params$event, "</span> <center><div class=logo><img src='https://github.com/datactivist/slides_datactivist/raw/master/inst/rmarkdown/templates/xaringan/resources/img/fond_noir_monochrome.png' width='100px'></center></span></div>")`
 
-------------------------------------------------------------------------
+---
 
 class: center, middle
 

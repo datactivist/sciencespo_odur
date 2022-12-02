@@ -71,7 +71,7 @@ Datactivist's work is freely reusable licenced under [Creative Commons 4.0 BY-SA
 
 <img style="float:right; margin:10px ; width:200px" src="https://datactivist.coop/recife/img/stickerdatapeople.png" />
 
-- Datactivist is a French cooperative company un specialised in open data created in 2016 with a mission to .red[**open data and make them useful**].
+- Datactivist is a French cooperative company specialised in open data created in 2016 with a mission to .red[**open data and make them useful**].
 
 - We are commited to open data as it can effectively .red[**reduce information asymetries**] and create a level-playing field. We work with data producers as well as reusers in public organisations, corporations and NGos.
 
